@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  website:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    image:
+      ubuntu:22.04
+    volumes:
+      - ./site/:/var/mail/
