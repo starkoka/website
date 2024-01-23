@@ -15,15 +15,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  text-align: center;
-}
-
-h1{
-  font-size: 30px;
-}
-
-a {
-  color: blue;
-}
