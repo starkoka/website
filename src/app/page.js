@@ -1,9 +1,11 @@
+import Link from 'next/link'
+
 
 export default function Home() {
   return (
       <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300">
           <nav className="bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg">
-              <h1 className="text-xl m-3">kokastar.dev</h1>
+              <h1 className="text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
           </nav>
           <div className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
               <div
