@@ -17,7 +17,7 @@ export default function Home() {
                   <h1 className="text-center text-[3vw]">I'm kokastar</h1>
                   <div className="flex justify-center MuiStack-root css-1t62lt9 mb-[10px]">
                       <a href="https://twitter.com/kokastar_dev">
-                          <svg className="w-[30px] " focusable="false"
+                          <svg className="w-[30px] mr-0.5" focusable="false"
                                aria-hidden="true" viewBox="0 0 24 24">
                               <path
                                   fill="#5B43F0"
@@ -27,7 +27,7 @@ export default function Home() {
                           </svg>
                       </a>
                       <a href="https://github.com/starkoka">
-                          <svg className="w-[30px]" focusable="false"
+                          <svg className="w-[30px] ml-0.5" focusable="false"
                                aria-hidden="true" viewBox="0 0 24 24">
                               <path
                                   fill="#5B43F0"
@@ -35,7 +35,6 @@ export default function Home() {
                               </path>
                           </svg>
                       </a>
-
                   </div>
               </div>
 
