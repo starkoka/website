@@ -11,7 +11,7 @@ export default function Home() {
               <div
                   className="h-auto w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
                   <dib className="flex items-center justify-center w-100 h-28 mb-[5vw]">
-                      <img src="/starkoka.jpeg" alt="kokastarのアイコン"
+                      <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
                            className="items-center rounded-full w-[10vw] mt-[5vw]"/>
                   </dib>
                   <h1 className="text-center text-[3vw]">I'm kokastar</h1>
