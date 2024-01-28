@@ -3,12 +3,21 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-      <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300">
+      <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 ">
           <nav className="bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg">
-              <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
-              <h1 className="flex text-xl m-3 flex-row-reverse"><Link href="/">TOP</Link></h1>
+              <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
+                  <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
+
+                  <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                      <a className="mr-5 hover:text-gray-900">First Link</a>
+                      <a className="mr-5 hover:text-gray-900">Second Link</a>
+                      <a className="mr-5 hover:text-gray-900">Third Link</a>
+                      <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+                  </nav>
+              </div>
           </nav>
-          <div className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
+          <div
+              className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
               <div
                   className="h-auto w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
                   <dib className="flex items-center justify-center w-100 h-28 mb-[5vw]">
