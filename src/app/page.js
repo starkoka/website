@@ -1,20 +1,55 @@
+'use client';
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+
+const useMediaQuery= (width) => {
+    const [targetReached, setTargetReached] = useState(false)
+
+    const updateTarget = () => {
+        setTargetReached(window.innerWidth > width)
+    }
+
+    useEffect(() => {
+        updateTarget()
+        window.addEventListener('resize', updateTarget)
+        return () => window.removeEventListener('resize', updateTarget)
+    }, [])
+
+    return targetReached
+}
 
 
 export default function Home() {
+  const isDesktop = useMediaQuery(768);
+  const header = isDesktop ? (
+      <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
+          <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
+
+          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+              <a className="mr-5 hover:text-gray-900">First Link</a>
+              <a className="mr-5 hover:text-gray-900">Second Link</a>
+              <a className="mr-5 hover:text-gray-900">Third Link</a>
+              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+          </nav>
+      </div>
+  ): (
+      <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
+          <h1 className="flex text-xl m-3"><Link href="/">dev.kokastar</Link></h1>
+
+          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+              <a className="mr-5 hover:text-gray-900">First Link</a>
+              <a className="mr-5 hover:text-gray-900">Second Link</a>
+              <a className="mr-5 hover:text-gray-900">Third Link</a>
+              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+          </nav>
+      </div>
+  )
+
   return (
       <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 ">
           <nav className="bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg">
-              <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
-                  <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
-
-                  <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                      <a className="mr-5 hover:text-gray-900">First Link</a>
-                      <a className="mr-5 hover:text-gray-900">Second Link</a>
-                      <a className="mr-5 hover:text-gray-900">Third Link</a>
-                      <a className="mr-5 hover:text-gray-900">Fourth Link</a>
-                  </nav>
-              </div>
+              {header}
           </nav>
           <div
               className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
