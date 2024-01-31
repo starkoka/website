@@ -22,6 +22,13 @@ const useMediaQuery= (width) => {
 
 export default function Home() {
   const isDesktop = useMediaQuery(768);
+  const [isOpen, setOpen] = useState(false);
+  const handleMenuOpen = () => {
+      setOpen(!isOpen);
+  };
+  const handleMenuClose = () => {
+      setOpen(false);
+  };
   const header = isDesktop ? (
       <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
           <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
@@ -37,26 +44,72 @@ export default function Home() {
       <div className="container mx-auto flex flex-wrapflex-col md:flex-row items-center">
           <h1 className="flex text-xl m-3"><Link href="/">dev.kokastar</Link></h1>
 
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              <a className="mr-5 hover:text-gray-900">First Link</a>
-              <a className="mr-5 hover:text-gray-900">Second Link</a>
-              <a className="mr-5 hover:text-gray-900">Third Link</a>
-              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+          <nav
+              className={
+                  isOpen
+                      ? "z-40 bg-blue-100 fixed top-0 right-0 bottom-0 left-0 h-screen flex flex-col"
+                      : "fixed right-[-100%] md:right-4"
+              }
+          >
+              <ul
+                  className={
+                      isOpen
+                          ? "flex h-screen justify-center items-center flex-col gap-6 text-xl"
+                          : "block md:flex md:gap-8"
+                  }
+              >
+                  <li>
+                      <Link onClick={handleMenuClose} href="/about">
+                          About
+                      </Link>
+                  </li>
+                  <li>
+                      <Link onClick={handleMenuClose} href="/company">
+                          Company
+                      </Link>
+                  </li>
+                  <li>
+                      <Link onClick={handleMenuClose} href="/recruit">
+                          Recruit
+                      </Link>
+                  </li>
+              </ul>
           </nav>
+          <button className="z-50 space-y-2 md:hidden" onClick={handleMenuOpen}>
+        <span
+            className={
+                isOpen
+                    ? "block w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 duration-300"
+                    : "block w-8 h-0.5 bg-gray-600 duration-300"
+            }
+        />
+              <span
+                  className={
+                      isOpen ? "block opacity-0 duration-300" : "block w-8 h-0.5 bg-gray-600 duration-300"
+                  }
+              />
+              <span
+                  className={
+                      isOpen
+                          ? "block w-8 h-0.5 bg-gray-600 -rotate-45 duration-300"
+                          : "block w-8 h-0.5 bg-gray-600 duration-300"
+                  }
+              />
+          </button>
       </div>
   )
 
-  return (
-      <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 ">
-          <nav className="bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg">
-              {header}
-          </nav>
-          <div
-              className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
-              <div
-                  className="h-auto w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
-                  <dib className="flex items-center justify-center w-100 h-28 mb-[5vw]">
-                      <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
+    return (
+        <div className="w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 ">
+            <nav className="bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg">
+                {header}
+            </nav>
+            <div
+                className="item-center w-full from-blue-300 via-indigo-300 to-purple-300 flex items-center justify-center">
+                <div
+                    className="h-auto w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
+                    <dib className="flex items-center justify-center w-100 h-28 mb-[5vw]">
+                        <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
                            className="items-center rounded-full w-[10vw] mt-[5vw]"/>
                   </dib>
                   <h1 className="text-center text-[3vw]">I'm kokastar</h1>
