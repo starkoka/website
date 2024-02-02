@@ -34,10 +34,9 @@ export default function Home() {
           <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
 
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              <a className="mr-5 hover:text-gray-900">First Link</a>
-              <a className="mr-5 hover:text-gray-900">Second Link</a>
-              <a className="mr-5 hover:text-gray-900">Third Link</a>
-              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+              <a className="mr-5 hover:text-gray-900">about</a>
+              <a className="mr-5 hover:text-gray-900">blog</a>
+              <a className="mr-5 hover:text-gray-900">link</a>
           </nav>
       </div>
   ): (
@@ -60,17 +59,17 @@ export default function Home() {
               >
                   <li>
                       <Link onClick={handleMenuClose} href="/about">
-                          About
+                          about
                       </Link>
                   </li>
                   <li>
-                      <Link onClick={handleMenuClose} href="/company">
-                          Company
+                      <Link onClick={handleMenuClose} href="/blog">
+                          blog
                       </Link>
                   </li>
                   <li>
-                      <Link onClick={handleMenuClose} href="/recruit">
-                          Recruit
+                      <Link onClick={handleMenuClose} href="/link">
+                          link
                       </Link>
                   </li>
               </ul>
