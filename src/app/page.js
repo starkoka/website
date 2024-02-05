@@ -34,9 +34,9 @@ export default function Home() {
           <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
 
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+              <a className="mr-5 hover:text-gray-900">top</a>
               <a className="mr-5 hover:text-gray-900">about</a>
-              <a className="mr-5 hover:text-gray-900">blog</a>
-              <a className="mr-5 hover:text-gray-900">link</a>
+              <a className="mr-5 hover:text-gray-900">portfolio</a>
           </nav>
       </div>
   ): (
@@ -59,17 +59,17 @@ export default function Home() {
               >
                   <li>
                       <Link onClick={handleMenuClose} href="/about">
-                          about
+                          top
                       </Link>
                   </li>
                   <li>
                       <Link onClick={handleMenuClose} href="/blog">
-                          blog
+                          about
                       </Link>
                   </li>
                   <li>
                       <Link onClick={handleMenuClose} href="/link">
-                          link
+                          portfolio
                       </Link>
                   </li>
               </ul>
