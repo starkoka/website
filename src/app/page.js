@@ -78,20 +78,20 @@ export default function Home() {
               <span
                   className={
                       isOpen
-                          ? "block w-5 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 duration-300"
-                          : "block w-5 h-0.5 bg-gray-600 duration-300"
+                          ? "block w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 duration-300"
+                          : "block w-8 h-0.5 bg-gray-600 duration-300"
                   }
               />
               <span
                   className={
-                      isOpen ? "block opacity-0 duration-300" : "block w-5 h-0.5 bg-gray-600 duration-300"
+                      isOpen ? "block opacity-0 duration-300" : "block w-8 h-0.5 bg-gray-600 duration-300"
                   }
               />
               <span
                   className={
                       isOpen
-                          ? "block w-5 h-0.5 bg-gray-600 -rotate-45 duration-300"
-                          : "block w-5 h-0.5 bg-gray-600 duration-300"
+                          ? "block w-8 h-0.5 bg-gray-600 -rotate-45 duration-300"
+                          : "block w-8 h-0.5 bg-gray-600 duration-300"
                   }
               />
           </button>
