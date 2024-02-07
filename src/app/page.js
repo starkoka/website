@@ -74,7 +74,7 @@ export default function Home() {
                   </li>
               </ul>
           </nav>
-          <button className="z-50 space-y-2 md:hidden" onClick={handleMenuOpen}>
+          <button className="z-50 space-y-2 md:hidden ml-auto" onClick={handleMenuOpen}>
               <span
                   className={
                       isOpen
