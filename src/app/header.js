@@ -34,9 +34,9 @@ export default function Header() {
             <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
 
             <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a className="mr-5 hover:text-gray-900">top</a>
-                <a className="mr-5 hover:text-gray-900">about</a>
-                <a className="mr-5 hover:text-gray-900">works</a>
+                <a className="mr-5 hover:text-gray-900" href="/">top</a>
+                <a className="mr-5 hover:text-gray-900" href="/about">about</a>
+                <a className="mr-5 hover:text-gray-900" href="/works">works</a>
             </nav>
         </div>
     ) : (
@@ -89,17 +89,17 @@ export default function Header() {
                                 }
                             >
                                 <li>
-                                    <Link onClick={handleMenuClose} href="/about">
+                                    <Link onClick={handleMenuClose} href="/">
                                         top
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link onClick={handleMenuClose} href="/blog">
+                                    <Link onClick={handleMenuClose} href="/about">
                                         about
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link onClick={handleMenuClose} href="/link">
+                                    <Link onClick={handleMenuClose} href="/works">
                                         works
                                     </Link>
                                 </li>
