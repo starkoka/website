@@ -2,14 +2,14 @@ export const dynamic = 'force-dynamic' // defaults to auto
 const axios = require('axios');
 
 const colors = [
-    "808080", // gray
-    "804000", // brown
-    "008000", // green
-    "00C0C0", // cyan
-    "0000FF", // blue
-    "C0C000", // yellow
-    "FF8000", // orange
-    "FF0000", // red
+    "#808080", // gray
+    "#804000", // brown
+    "#008000", // green
+    "#00C0C0", // cyan
+    "#0000FF", // blue
+    "#C0C000", // yellow
+    "#FF8000", // orange
+    "#FF0000", // red
 ];
 
 export async function GET(req) {
@@ -35,12 +35,12 @@ export async function GET(req) {
                 )
             ).data.slice(-1)[0].NewRating;
 
-            res.message = rating;
-            res.color = colors[Number(rating)>=2400 ? 7 : Math.floor(Number(rating)/400)];
+            res.message = String(rating);
+            res.color = colors[rating>=2400 ? 7 : Math.floor(rating/400)];
         }
         catch{
             res.message = "IE";
-            res.color = "F0AD4E";
+            res.color = "#F0AD4E";
         }
     }
     else{
@@ -52,12 +52,12 @@ export async function GET(req) {
                 )
             ).data.slice(-1)[0].NewRating;
 
-            res.message = rating;
-            res.color = colors[Number(rating)>=2400 ? 7 : Math.floor(Number(rating)/400)];
+            res.message = String(rating);
+            res.color = colors[rating>=2400 ? 7 : Math.floor(rating/400)];
         }
         catch{
             res.message = "IE";
-            res.color = "F0AD4E";
+            res.color = "#F0AD4E";
         }
     }
 
