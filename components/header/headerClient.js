@@ -20,9 +20,9 @@ export default function HeaderClient() {
         <div>
             {isDesktop ? (
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                    <h1 className="flex text-xl m-3"><Link href="/public">kokastar.dev</Link></h1>
+                    <h1 className="flex text-xl m-3"><Link href="/">kokastar.dev</Link></h1>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-gray-900" href="/public">top</a>
+                        <a className="mr-5 hover:text-gray-900" href="/">top</a>
                         <a className="mr-5 hover:text-gray-900" href="/about">about</a>
                         <a className="mr-5 hover:text-gray-900" href="/works">works</a>
                     </nav>
