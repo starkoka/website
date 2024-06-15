@@ -61,7 +61,7 @@ export default function AtcoderTile() {
                 <p>競技プログラミングのコンテストサイトです。</p>
                 <p>ABC/AHCを中心に、たまにARCにも出場しています。</p>
                 <Link href="https://atcoder.jp/users/kokastar" target="_blank"><p
-                    className="mt-[1vw] underline">AtCoderアカウント</p></Link>
+                    className="mt-[2vw] underline">AtCoderアカウント</p></Link>
             </div>
         </div>
     );
