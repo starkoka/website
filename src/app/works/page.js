@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
     return (
-        <div className="h-full w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300">
+        <div>
             <div className="flex flex-col items-center">
                 <div
                     className="w-[100vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">

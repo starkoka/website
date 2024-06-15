@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "../../components/header";
+import Footer from "../../components/footter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,13 @@ export default function RootLayout({ children }) {
           <meta name="msapplication-TileColor" content="#da532c"/>
           <meta name="theme-color" content="#ffffff"/>
           <html lang="ja">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <div className="h-full w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300">
+                    <Header/>
+                    {children}
+                    <Footer/>
+                </div>
+            </body>
           </html>
       </>
   );
