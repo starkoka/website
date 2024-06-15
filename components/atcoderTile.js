@@ -19,8 +19,18 @@ export default function AtcoderTile() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("/api/atcoder");
-            const result = await response.json();
+            const responseA = await fetch("/api/atcoder");
+            const responseH = await fetch("/api/atcoder?type=H");
+
+            const resultA = await responseA.json();
+            const resultH = await responseH.json();
+
+            const result = {
+                colorA:resultA.color,
+                ratingA:resultA.message,
+                colorH:resultH.color,
+                ratingH:resultH.message,
+            }
             setData(result);
         }
 
@@ -32,6 +42,7 @@ export default function AtcoderTile() {
             className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
             <h1 className="text-center text-[1.5vw]">AtCoder</h1>
             <div className="text-center text-[1vw]">
+                <p>レート読み込み中...</p>
                 <p>競技プログラミングのコンテストサイトです。</p>
                 <p>ABC/AHCを中心に、たまにARCにも出場しています。</p>
                 <Link href="https://atcoder.jp/users/kokastar" target="_blank"><p
@@ -45,7 +56,10 @@ export default function AtcoderTile() {
             className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
             <h1 className="text-center text-[1.5vw]">AtCoder</h1>
             <div className="text-center text-[1vw]">
-                <p style={{color: data.color}}>{data.message}</p>
+                <div>
+                    <a>Algorithm:</a><a style={{color: data.colorA}}>{data.ratingA}</a><a> / </a>
+                    <a>Heuristic:</a><a style={{color: data.colorH}}>{data.ratingH}</a>
+                </div>
                 <p>競技プログラミングのコンテストサイトです。</p>
                 <p>ABC/AHCを中心に、たまにARCにも出場しています。</p>
                 <Link href="https://atcoder.jp/users/kokastar" target="_blank"><p
