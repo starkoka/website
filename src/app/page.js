@@ -8,7 +8,7 @@ export default function Home() {
             <Header/>
             <div className="flex flex-col items-center">
                 <div
-                    className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
+                    className="w-[100vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
                     <div className="flex items-center justify-center w-full h-28 mb-[5vw]">
                         <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
                              className="rounded-full w-[10vw] mt-[5vw]"/>
@@ -36,21 +36,20 @@ export default function Home() {
                     <div className="ml-[2vw] text-[1vw]">
                         <p>kokastarです。表記はkokastar or こかすた〜です。</p>
                         <p>競技プログラミング・高専ロボコンを中心に色々やってる高専生です。</p>
-                        <p>C++/Python/JavaScriptでの開発経験があります。</p>
+                        <p>C++/Python/JavaScriptでの開発経験があります。Web系はこのサイトが作れる程度です。</p>
                     </div>
                 </div>
 
-                <div className="flex flex-wrap justify-center mt-[3vw] space-x-10 w-[66vw]">
+                <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
                     <div
-                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center">
+                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
                         <Link href="/about"><h1 className="text-center text-[2vw] underline">about→</h1></Link>
-                        <p className="text-center text-[1vw]">詳しい自己紹介</p>
+                        <p className="text-center text-[1vw]">もっと詳しい自己紹介</p>
                     </div>
                     <div
-                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center">
+                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
                         <Link href="/works"><h1 className="text-center text-[2vw] underline">works→</h1></Link>
-                        <p className="text-center text-[1vw]">過去の実績
-                            の紹介</p>
+                        <p className="text-center text-[1vw]">過去に作ったもの・取り組んだことの紹介</p>
                     </div>
                 </div>
             </div>
