@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
           <meta name="theme-color" content="#ffffff"/>
           <html lang="ja">
             <body className={inter.className}>
-                <div className="h-full w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300">
+                <div className="h-full w-full bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 flex flex-col min-h-screen">
                     <Header/>
-                    {children}
+                    <main className="flex-grow">{children}</main>
                     <Footer/>
                 </div>
             </body>
