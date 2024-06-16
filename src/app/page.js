@@ -35,7 +35,7 @@ export default function Home() {
                     <div className="ml-[2vw] text-[1vw]">
                         <p>kokastarです。表記はkokastar or こかすた〜です。</p>
                         <p>競技プログラミング・高専ロボコンを中心に色々やってる高専生です。</p>
-                        <p>C++/Python/JavaScriptでの開発経験があります。Web系はこのサイトが作れる程度です。</p>
+                        <p>主にC++/Python/JavaScriptを扱っています。Web系はこのサイトが作れる程度です。</p>
                     </div>
                 </div>
 
