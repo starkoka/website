@@ -1,19 +1,18 @@
 import AtCoderTile from '/components/atcoderTile.js';
 import Link from 'next/link';
 import ProjectCard from "../../../components/projectCard";
+import React from "react";
+import Title from '../../../components/title';
 
 
 export default function Home() {
     return (
         <div>
             <div className="flex flex-col items-center">
-                <div
-                    className="w-[100vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
-                    <h1 className="text-center text-[3vw]">works</h1>
-                    <div className="text-center text-[1vw]">
-                        <p>今までに作ったものや取り組んできたものを紹介しています。</p>
-                    </div>
-                </div>
+                <Title
+                    title="works"
+                    description="今までに作ったものや取り組んできたものを紹介しています。"
+                />
 
                 <div
                     className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
@@ -42,7 +41,7 @@ export default function Home() {
                             title="Stellarculator"
                             description={`ラズパイと2bit加減算機を組み合わせた電卓です。\n\nラズパイにロジックICで自作した2bit加減算機を接続しています。`}
                             linkText="詳細はこちら"
-                            linkUrl="https://github.com/starkoka/Tasclear"
+                            linkUrl="/works/Stellarculator"
                         />
                         <ProjectCard
                             title="高専ロボコンHP更新お知らせbot"

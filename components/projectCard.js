@@ -9,7 +9,7 @@ const ProjectCard = ({ title, description, linkText, linkUrl }) => {
                 <ReactMarkdown>
                     {description}
                 </ReactMarkdown>
-                <Link href={linkUrl} target="_blank">
+                <Link href={linkUrl}>
                     <p className="mt-[2vw] underline">{linkText}</p>
                 </Link>
             </div>
