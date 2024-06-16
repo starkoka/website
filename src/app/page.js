@@ -12,7 +12,7 @@ export default function Home() {
                         <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
                              className="rounded-full w-[10vw] mt-[5vw]"/>
                     </div>
-                    <h1 className="text-center text-[3vw]">I'm kokastar</h1>
+                    <h1 className="text-center text-[3vw]">I am kokastar</h1>
                     <div className="flex justify-center mb-[10px]">
                         <a href="https://twitter.com/kokastar_dev">
                             <svg className="w-[30px] mr-0.5" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
