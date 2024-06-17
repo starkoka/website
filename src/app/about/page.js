@@ -3,6 +3,7 @@ import Title from "../../../components/title";
 import React from "react";
 import Tile from "../../../components/tile";
 import SkillCard from "../../../components/skillCard";
+import ReactMarkdown from "react-markdown";
 
 
 export default function Home() {
@@ -56,7 +57,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-wrap justify-center mt-[3vw] space-x-[1vw]">
                     <SkillCard
-                        title="node.js / JavaScript"
+                        title="node.js / JS"
                         description={'★★★'}
                         iconURL={"https://skillicons.dev/icons?i=nodejs,js&theme=light"}
                     />
@@ -118,6 +119,31 @@ export default function Home() {
                         title="Prisma"
                         description={'★'}
                         iconURL={"https://skillicons.dev/icons?i=prisma&theme=light"}
+                    />
+                </div>
+
+
+                <div
+                    className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
+                    <h1 className="text-center text-[2vw]">その他</h1>
+                    <div className="text-center text-[1vw]">
+                        <p>その他の紹介</p>
+                    </div>
+                </div>
+                <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
+                    <div
+                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw] p-4">
+                        <h1 className="text-center text-[1.5vw]">きなこ</h1>
+                        <div className="text-center text-[1vw]">
+                            <p>実家で飼ってるハムスターです。</p>
+                            <p>このサイトにもたまにいます。</p>
+                            <img src="/images/kinako.png" alt="きなこ"
+                                 className="rounded-full w-[10vw] items-center mx-auto"/>
+                        </div>
+                    </div>
+                    <Tile
+                        title="大会出場暦"
+                        description={'高専ロボコン2022/2023出場'}
                     />
                 </div>
             </div>
