@@ -61,7 +61,10 @@ export default function Home() {
                 </div>
                 <div>
                     <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
-                        <AtCoderTile/>
+                        <AtCoderTile
+                            title={'AtCoder'}
+                            description={`競技プログラミングのコンテストサイトです。\n\nABC/AHCを中心に、たまにARCにも出場しています。`}
+                        />
                         <ProjectCard
                             title="高専ロボコン"
                             description={`高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2022/2023共に地区予選敗退という悔しい結果に終わっています。`}
