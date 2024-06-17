@@ -1,21 +1,9 @@
-'use client';
-
+import Header from '../../../components/header.js';
 import Link from 'next/link';
-import { useState } from 'react';
-import { useMediaQuery } from './mediaQuery.js';
 
-export default function HeaderClient() {
-    const isDesktop = useMediaQuery(768);
-    const [isOpen, setOpen] = useState(false);
+const isDesktop = true;
 
-    const handleMenuOpen = () => {
-        setOpen(!isOpen);
-    };
-
-    const handleMenuClose = () => {
-        setOpen(false);
-    };
-
+export default function Home() {
     return (
         <div>
             <div>

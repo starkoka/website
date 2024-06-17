@@ -8,6 +8,14 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.text-\[1\.5vw\] {
+  font-size: 1.5vw;
+}
+
+.w-\[15\.75vw\] {
+  width: 15.75vw;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
