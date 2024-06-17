@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export default function AtcoderTile({title, description}) {
     const [data, setData] = useState(null);
@@ -33,7 +34,7 @@ export default function AtcoderTile({title, description}) {
             <h1 className="text-center text-[1.5vw]">{title}</h1>
             <div className="text-center text-[1vw]">
                 <p>loading...</p>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                     {description}
                 </ReactMarkdown>
                 <Link href="https://atcoder.jp/users/kokastar" target="_blank"><p
@@ -49,7 +50,7 @@ export default function AtcoderTile({title, description}) {
             <div className="text-center text-[1vw]">
                 <a>Algorithm:</a><a style={{color: data.colorA}}>{data.ratingA}</a><a> / </a>
                 <a>Heuristic:</a><a style={{color: data.colorH}}>{data.ratingH}</a>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                     {description}
                 </ReactMarkdown>
                 <Link href="https://atcoder.jp/users/kokastar" target="_blank"><p

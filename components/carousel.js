@@ -21,8 +21,8 @@ const Carousel = ({ images }) => {
         <div className="max-w-6xl mx-auto mt-10">
             <Splide options={options}>
                 {images.map((image, index) => (
-                    <SplideSlide key={index}>
-                        <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto object-cover rounded-lg" />
+                    <SplideSlide key={index} className="flex items-center">
+                        <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto object-cover rounded-lg my-auto" />
                     </SplideSlide>
                 ))}
             </Splide>

@@ -1,16 +1,18 @@
 import React from 'react';
 import Link from "next/link";
 import WorksPage from "../../../../components/worksPage";
+import EmbedMedia from "../../../../components/embedMedia";
 
 const Project = () => {
     const images = [
-        '../../../../images/works/Stellaculator/1.png',
-        '../../../../images/works/Stellaculator/2.jpg',
-        '../../../../images/works/Stellaculator/3.jpg',
-        '../../../../images/works/Stellaculator/4.jpg'
+        '../../../../images/works/Stellarculator/1.png',
+        '../../../../images/works/Stellarculator/2.jpg',
+        '../../../../images/works/Stellarculator/3.jpg',
+        '../../../../images/works/Stellarculator/4.jpg'
     ];
 
-    const body = "ここに説明を入力するのだ。\n\nMarkdownも使えるのだ。~~TeXは使えないのだ~~"
+    const body = `学校の自由課題で作成に取り組んだ作品です。\n\n学校の授業課題で[naotiki君(GitHub:naotiki)](https://naotiki.me/)・[NXVZBGBFBEN君(同:NXVZBGBFBEN)](https://nxvzbgbfben.pages.dev/)・[KouRo君(同:Kou-Ro)](https://github.com/Kou-Ro)と2bit加減算機を作成し、それをベースとしました。\n\n​\n\nスイッチを使用する代わりに、フォトトランジスタとLEDから自作したフォトカプラを経由して、ラズベリーパイから加減算機に入力を入れています。\n\nこれにより2進数2桁の計算を行ってくれるので、あとはそれを筆算を行うときのように繰り返し利用して、計算させています。チカチカ光るのはロマンなので、同等の計算量でよりチカチカするような計算順に工夫しています。
+    `
 
     return (
         <WorksPage
@@ -29,6 +31,20 @@ const Project = () => {
             }
             body={body}
             images={images}
+            other={
+                <div>
+                    <EmbedMedia
+                        title="動作デモ動画①"
+                        url="https://drive.google.com/file/d/1dsPoW027ptcQfAE60Z9DFQTDcoIKyGOU/preview"
+                        description="2進数2桁同士の足し算のデモです。奥の赤色LEDが計算結果になっています。"
+                    />
+                    <EmbedMedia
+                        title="動作デモ動画②"
+                        url="https://drive.google.com/file/d/1-ztQexdaVisB3AX6BuUhXV-75ciBT4rY/preview"
+                        description="完成版で実際に2006×1214を計算させてみている動画です。"
+                    />
+                </div>
+            }
         />
     );
 };

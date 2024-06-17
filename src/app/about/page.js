@@ -138,7 +138,7 @@ export default function Home() {
                     />
                     <Tile
                         title="Linux"
-                        description={'日常的にArch Linux(i3wm) & Ubuntuを使用しています。\n\nWindowsと別ディスクに入れてのデュアルブート運用です。\n\nGentooは過去インストール経験があります。'}
+                        description={'日常的にArch Linux(i3wm) & Ubuntuを使用しています。\n\nWindowsと別ディスクに入れてのデュアルブート運用です。\n\nGentooは過去にインストール経験があります。'}
                     />
                 </div>
                 <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">

@@ -1,5 +1,4 @@
 import AtCoderTile from '/components/atcoderTile.js';
-import Link from 'next/link';
 import ProjectCard from "../../../components/projectCard";
 import React from "react";
 import Title from '../../../components/title';
@@ -38,7 +37,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
                         <ProjectCard
-                            title="Tasclear"
+                            title="たすくりあ"
                             description={`あなたの頑張りを見える化するDiscordBOTです。\n\nKloudハッカソン#3で発表しました。`}
                             linkText="詳細はこちら"
                             linkUrl="/works/Tasclear"
@@ -81,7 +80,7 @@ export default function Home() {
                         />
                         <ProjectCard
                             title="高専ロボコン"
-                            description={`高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2022/2023共に地区予選敗退という悔しい結果に終わっています。`}
+                            description={`高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2024年はAチームの制御を担当しています。`}
                             linkText="詳細はこちら"
                             linkUrl="works/KosenRBKN"
                         />
