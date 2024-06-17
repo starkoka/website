@@ -27,13 +27,27 @@ export default function Home() {
                             title="Hizk"
                             description={`GPT-4搭載の「意味から変換する」次世代IMEです。\n\nKloudハッカソン#4で優秀賞を受賞しました。`}
                             linkText="詳細はこちら"
-                            linkUrl="https://github.com/Team-Hmm/Hizk"
+                            linkUrl="/works/Hizk"
                         />
+                        <ProjectCard
+                            title="祗園祭Webサイト2023"
+                            description={`木更津高専の文化祭である祗園祭の2023年版Webサイトです。\n\nプログラミング研究同好会のメンバーとして共同開発しました。`}
+                            linkText="詳細はこちら"
+                            linkUrl="/works/gionsai2023"
+                        />
+                    </div>
+                    <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
                         <ProjectCard
                             title="Tasclear"
                             description={`あなたの頑張りを見える化するDiscordBOTです。\n\nKloudハッカソン#3で発表しました。`}
                             linkText="詳細はこちら"
-                            linkUrl="https://github.com/starkoka/Tasclear"
+                            linkUrl="/works/Tasclear"
+                        />
+                        <ProjectCard
+                            title="木更津高専統合管理BOT"
+                            description={`木更津高専生向けDiscordBOTです。\n\n主に非公式の学年サーバー向けに友人と開発しました。`}
+                            linkText="詳細はこちら"
+                            linkUrl="/works/KMM"
                         />
                     </div>
                     <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
@@ -46,8 +60,8 @@ export default function Home() {
                         <ProjectCard
                             title="高専ロボコンHP更新お知らせbot"
                             description={`高専ロボコンHPが更新された時Discordでお知らせします。\n\nいくつかのロボコン部で導入していただいています。`}
-                            linkText="詳細はこちら"
-                            linkUrl="https://github.com/starkoka/Tasclear"
+                            linkText="GitHubリポジトリ"
+                            linkUrl="https://github.com/starkoka/KosenRBKN-notice-bot"
                         />
                     </div>
                 </div>
@@ -69,7 +83,7 @@ export default function Home() {
                             title="高専ロボコン"
                             description={`高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2022/2023共に地区予選敗退という悔しい結果に終わっています。`}
                             linkText="詳細はこちら"
-                            linkUrl="https://official-robocon.com/kosen/"
+                            linkUrl="works/KosenRBKN"
                         />
                     </div>
                     <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
