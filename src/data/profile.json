@@ -27,6 +27,21 @@
             "name": "AtCoder",
             "url": "https://atcoder.jp/users/kokastar",
             "icon": "atcoder"
+        },
+        {
+            "name": "note",
+            "url": "https://note.com/kokastar",
+            "icon": "note"
+        },
+        {
+            "name": "Zenn",
+            "url": "https://zenn.dev/kokastar",
+            "icon": "zenn"
+        },
+        {
+            "name": "Qiita",
+            "url": "https://qiita.com/kokastar",
+            "icon": "qiita"
         }
     ]
 }

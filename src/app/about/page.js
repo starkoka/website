@@ -45,7 +45,7 @@ export default function AboutPage() {
                 />
                 <Tile
                     title="経歴"
-                    description="2006年12月14日生まれ\n\n2022年4月　木更津高専情報工学科入学"
+                    description={"2006年12月14日生まれ\n\n2022年4月　木更津高専情報工学科入学"}
                 />
                 <Tile
                     title="受賞歴"
