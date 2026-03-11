@@ -1,0 +1,93 @@
+{
+    "events": [
+        {
+            "date": "2006-12",
+            "title": "誕生",
+            "description": "12月14日生まれ",
+            "type": "life",
+            "link": null
+        },
+        {
+            "date": "2022-04",
+            "title": "木更津高専 入学",
+            "description": "情報工学科に入学",
+            "type": "education",
+            "link": null
+        },
+        {
+            "date": "2022-10",
+            "title": "高専ロボコン2022 出場",
+            "description": "Bチームのリーダーとして参加",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
+        },
+        {
+            "date": "2023-01",
+            "title": "GCI 2023 Winter 修了",
+            "description": "東大松尾研が開催するデータサイエンスの講座を修了",
+            "type": "achievement",
+            "link": null
+        },
+        {
+            "date": "2023-10",
+            "title": "高専ロボコン2023 出場",
+            "description": "Bチームのリーダーとして2年連続参加",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
+        },
+        {
+            "date": "2023-10",
+            "title": "AtCoder Junior League 2023",
+            "description": "高校部門14位 / 高2部門 個人43位",
+            "type": "contest",
+            "link": null
+        },
+        {
+            "date": "2023-11",
+            "title": "日本情報オリンピック 2023/2024",
+            "description": "一次予選 全問正解、二次予選 174点",
+            "type": "contest",
+            "link": null
+        },
+        {
+            "date": "2024-01",
+            "title": "Kloudハッカソン#3",
+            "description": "「たすくりあ」を発表",
+            "type": "contest",
+            "link": "/works/Tasclear"
+        },
+        {
+            "date": "2024-03",
+            "title": "Kloudハッカソン#4 優秀賞",
+            "description": "「Hizk」でKloudハッカソン#4 優秀賞を受賞",
+            "type": "achievement",
+            "link": "/works/Hizk"
+        },
+        {
+            "date": "2024-06",
+            "title": "DIVER OSINT CTF 2024",
+            "description": "UFO_TH_JPチームとして参加し10位",
+            "type": "contest",
+            "link": null
+        },
+        {
+            "date": "2024-10",
+            "title": "高専ロボコン2024 出場",
+            "description": "Aチームの制御を担当",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
+        }
+    ],
+    "typeLabels": {
+        "life": "ライフイベント",
+        "education": "学歴",
+        "contest": "コンテスト",
+        "achievement": "受賞・修了"
+    },
+    "typeColors": {
+        "life": "#10b981",
+        "education": "#3b82f6",
+        "contest": "#f59e0b",
+        "achievement": "#ef4444"
+    }
+}

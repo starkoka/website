@@ -1,20 +1,22 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-
-const Tile = ({ title, description, iconURL}) => {
+const SkillCard = ({ title, description, iconURL }) => {
     return (
-        <div
-            className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[15.75vw] p-4">
-            <h1 className="text-center text-[1.5vw]">{title}</h1>
-            <img src={iconURL} alt={title} className="m-auto"/>
-            <div className="text-center text-[1.5vw]">
-                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-                    {description}
-                </ReactMarkdown>
-            </div>
+        <div className="card p-4 md:p-5 w-full flex flex-col items-center text-center">
+            <h3 className="text-sm md:text-base font-bold mb-2" style={{ color: 'var(--color-text-primary)' }}>
+                {title}
+            </h3>
+            {iconURL && (
+                <img
+                    src={iconURL}
+                    alt={title}
+                    className="h-10 md:h-12 object-contain mb-2"
+                    loading="lazy"
+                />
+            )}
+            <p className="text-xs md:text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                {description}
+            </p>
         </div>
     );
 };
 
-export default Tile;
+export default SkillCard;

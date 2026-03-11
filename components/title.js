@@ -1,20 +1,22 @@
-import ReactMarkdown from 'react-markdown';
-import React from "react";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-
-const Title = ({ title, description}) => {
+const SectionTitle = ({ title, description }) => {
     return (
-        <div
-            className="w-[100vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
-            <h1 className="text-center text-[3vw]">{title}</h1>
-            <div className="text-center text-[1vw]">
-                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+        <div className="w-full text-center py-6 md:py-8 mb-6 md:mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
+                <span className="gradient-text">{title}</span>
+            </h1>
+            {description && (
+                <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: 'var(--color-text-secondary)' }}>
                     {description}
-                </ReactMarkdown>
-            </div>
+                </p>
+            )}
+            <div
+                className="w-16 h-1 mx-auto mt-4 rounded-full"
+                style={{
+                    background: 'linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end))',
+                }}
+            />
         </div>
     );
 };
 
-export default Title;
+export default SectionTitle;

@@ -1,40 +1,33 @@
 import React from 'react';
-import Title from './title.js';
+import SectionTitle from './title.js';
 import Carousel from "./carousel";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-const nothing = () => {
-    return <div></div>
-}
-
-const WorksPage = ({ title, description, icons=[], body, images=[], other=nothing()})  => {
-
+const WorksPage = ({ title, description, icons = [], body, images = [], other = null }) => {
     return (
-        <div className="items-center">
-            <Title
-                title={title}
-                description={description}
-            />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+            <SectionTitle title={title} description={description} />
 
-            {icons.length === 0 ? <div></div> : icons}
+            {icons.length === 0 ? null : (
+                <div className="flex justify-center mb-6">{icons}</div>
+            )}
 
-            <div
-                className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[2vw] mx-auto">
-                <ReactMarkdown className="ml-[2vw]" remarkPlugins={[remarkGfm]}>
-                    {body}
-                </ReactMarkdown>
+            <div className="card p-4 md:p-8 mb-6 md:mb-8">
+                <div className="prose-custom text-sm md:text-base">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {body}
+                    </ReactMarkdown>
+                </div>
             </div>
 
+            {other}
 
-            {other ?? nothing()}
-
-            {images.length === 0 ? <div></div> :
-                <div
-                    className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw] mx-auto">
-                    <div className="m-5"><Carousel images={images}/></div>
+            {images.length > 0 && (
+                <div className="card p-4 md:p-6 mt-6 md:mt-8">
+                    <Carousel images={images} />
                 </div>
-            }
+            )}
         </div>
     );
 };

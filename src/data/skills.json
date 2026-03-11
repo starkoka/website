@@ -1,0 +1,101 @@
+{
+    "categories": [
+        {
+            "name": "★★★",
+            "label": "開発経験が多々あり",
+            "items": [
+                {
+                    "name": "node.js / JS",
+                    "icon": "https://skillicons.dev/icons?i=nodejs,js&theme=light",
+                    "description": "Discord BOT・Webアプリ開発"
+                },
+                {
+                    "name": "Git / GitHub",
+                    "icon": "https://skillicons.dev/icons?i=git,github&theme=light",
+                    "description": "日常的に使用"
+                },
+                {
+                    "name": "Linux",
+                    "icon": "https://skillicons.dev/icons?i=linux&theme=light",
+                    "description": "Arch Linux / Ubuntu"
+                },
+                {
+                    "name": "discord.js",
+                    "icon": "https://skillicons.dev/icons?i=bots&theme=light",
+                    "description": "複数のBOT開発"
+                },
+                {
+                    "name": "C / C++",
+                    "icon": "https://skillicons.dev/icons?i=c,cpp&theme=light",
+                    "description": "競プロ・組込み開発"
+                }
+            ]
+        },
+        {
+            "name": "★★",
+            "label": "多少の開発経験あり",
+            "items": [
+                {
+                    "name": "Python",
+                    "icon": "https://skillicons.dev/icons?i=python&theme=light",
+                    "description": "データサイエンス"
+                },
+                {
+                    "name": "Raspberry Pi",
+                    "icon": "https://skillicons.dev/icons?i=raspberrypi&theme=light",
+                    "description": "IoTプロジェクト"
+                },
+                {
+                    "name": "Arduino",
+                    "icon": "https://skillicons.dev/icons?i=arduino&theme=light",
+                    "description": "電子工作"
+                },
+                {
+                    "name": "Next.js / React",
+                    "icon": "https://skillicons.dev/icons?i=nextjs,react&theme=light",
+                    "description": "このサイトの開発"
+                }
+            ]
+        },
+        {
+            "name": "★",
+            "label": "チュートリアル程度",
+            "items": [
+                {
+                    "name": "Docker",
+                    "icon": "https://skillicons.dev/icons?i=docker&theme=light",
+                    "description": "基本的な使い方"
+                },
+                {
+                    "name": "Rust",
+                    "icon": "https://skillicons.dev/icons?i=rust&theme=light",
+                    "description": "学習中"
+                },
+                {
+                    "name": "Prisma",
+                    "icon": "https://skillicons.dev/icons?i=prisma&theme=light",
+                    "description": "基本的なCRUD"
+                }
+            ]
+        }
+    ],
+    "otherSkills": [
+        {
+            "title": "AtCoder(競プロ)",
+            "description": "アルゴリズム/ヒューリスティク共に参加しています。\n\n競プロに取り組む人の中ではそこまで高い方ではないです。",
+            "type": "atcoder"
+        },
+        {
+            "title": "Linux",
+            "description": "日常的にArch Linux(i3wm) & Ubuntuを使用しています。\n\nWindowsと別ディスクに入れてのデュアルブート運用です。\n\nGentooは過去にインストール経験があります。"
+        },
+        {
+            "title": "データサイエンス",
+            "description": "東大松尾研が開催するGCIを修了しています。\n\nそのため、Pythonのデータサイエンスライブラリを多少使えます。"
+        },
+        {
+            "title": "金属加工",
+            "description": "ボール盤・帯鋸盤・旋盤を多少扱えます。\n\n主にアルミの加工を経験しています。"
+        }
+    ]
+}

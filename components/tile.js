@@ -2,11 +2,13 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
-const Tile = ({ title, description}) => {
+const Tile = ({ title, description }) => {
     return (
-        <div className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw] p-4">
-            <h1 className="text-center text-[1.5vw]">{title}</h1>
-            <div className="text-center text-[1vw]">
+        <div className="card p-6 w-full">
+            <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+                {title}
+            </h3>
+            <div className="prose-custom text-sm md:text-base" style={{ color: 'var(--color-text-secondary)' }}>
                 <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                     {description}
                 </ReactMarkdown>

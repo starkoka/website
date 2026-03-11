@@ -1,0 +1,32 @@
+{
+    "name": "kokastar",
+    "displayName": "kokastar",
+    "altName": "こかすた〜",
+    "bio": "競技プログラミング・高専ロボコンを中心に色々やってる高専生です。主にC++/Python/JavaScriptを扱っています。",
+    "avatar": "/images/starkoka.jpeg",
+    "affiliation": "木更津高専 情報工学科",
+    "clubs": [
+        "ロボット研究同好会",
+        "プログラミング研究同好会"
+    ],
+    "other": [
+        "Japanese Scratch-Wiki 管理者"
+    ],
+    "socials": [
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/kokastar_dev",
+            "icon": "twitter"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/starkoka",
+            "icon": "github"
+        },
+        {
+            "name": "AtCoder",
+            "url": "https://atcoder.jp/users/kokastar",
+            "icon": "atcoder"
+        }
+    ]
+}

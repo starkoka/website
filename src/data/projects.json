@@ -1,0 +1,193 @@
+{
+    "categories": [
+        {
+            "name": "作品系",
+            "description": "個人的に作成したものから、学校の自由課題で取り組んだものまで",
+            "items": [
+                {
+                    "slug": "Hizk",
+                    "title": "Hizk",
+                    "description": "GPT-4搭載の「意味から変換する」次世代IMEです。\n\nKloudハッカソン#4で優秀賞を受賞しました。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "Hizkは、従来のIMEと異なり、意味から元の言葉を推測して変換することを行います。近年流行りのLLMを用いることで元の言葉を推測して返しています。\n\nオープンソースのIMEであるMozcをベースに、VisualC++で開発しました。詳細は以下のスライドに説明があります。\n\nOpenAI APIkeyがあれば、GitHubから自分でビルドして試すことも可能です。",
+                        "images": [
+                            "/images/works/Hizk/1.png",
+                            "/images/works/Hizk/2.png",
+                            "/images/works/Hizk/3.png"
+                        ],
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/Team-Hmm/Hizk",
+                                "icon": "github"
+                            }
+                        ],
+                        "embeds": [
+                            {
+                                "title": "Hizk 紹介スライド",
+                                "url": "https://drive.google.com/file/d/1Ydly9ZT3KlIgLGKCVJ-H8Qp2gEDKhET0/preview",
+                                "description": "Kloudハッカソン#4での発表スライドです。"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "slug": "gionsai2023",
+                    "title": "祗園祭Webサイト2023",
+                    "description": "木更津高専の文化祭である祗園祭の2023年版Webサイトです。\n\nプログラミング研究同好会のメンバーとして共同開発しました。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "木更津高専の文化祭「祗園祭」の2023年版公式Webサイトです。プログラミング研究同好会のメンバーとして共同開発しました。",
+                        "images": [],
+                        "links": [],
+                        "embeds": []
+                    }
+                },
+                {
+                    "slug": "Tasclear",
+                    "title": "たすくりあ",
+                    "description": "あなたの頑張りを見える化するDiscordBOTです。\n\nKloudハッカソン#3で発表しました。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "たすくりあは、あなたの頑張りを見える化するDiscordBOTです。タスク管理機能を備え、日々の進捗を可視化します。Kloudハッカソン#3で発表しました。",
+                        "images": [
+                            "/images/works/Tasclear/1.png",
+                            "/images/works/Tasclear/2.png",
+                            "/images/works/Tasclear/3.png",
+                            "/images/works/Tasclear/4.png"
+                        ],
+                        "links": [],
+                        "embeds": []
+                    }
+                },
+                {
+                    "slug": "KMM",
+                    "title": "木更津高専統合管理BOT",
+                    "description": "木更津高専生向けDiscordBOTです。\n\n主に非公式の学年サーバー向けに友人と開発しました。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "木更津高専生向けのDiscord管理BOTです。学年サーバーの運営を効率化するために友人と共同開発しました。",
+                        "images": [
+                            "/images/works/KMM/1.png",
+                            "/images/works/KMM/2.png",
+                            "/images/works/KMM/3.png"
+                        ],
+                        "links": [],
+                        "embeds": []
+                    }
+                },
+                {
+                    "slug": "Stellarculator",
+                    "title": "Stellarculator",
+                    "description": "ラズパイと2bit加減算機を組み合わせた電卓です。\n\nラズパイにロジックICで自作した2bit加減算機を接続しています。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "Stellarculatorは、Raspberry Piと自作の2bit加減算機を組み合わせた電卓です。ロジックICで構成した加減算回路をラズパイに接続し、計算結果を表示します。",
+                        "images": [
+                            "/images/works/Stellarculator/1.png",
+                            "/images/works/Stellarculator/2.jpg",
+                            "/images/works/Stellarculator/3.jpg",
+                            "/images/works/Stellarculator/4.jpg"
+                        ],
+                        "links": [],
+                        "embeds": []
+                    }
+                },
+                {
+                    "slug": "KosenRBKN",
+                    "title": "高専ロボコンHP更新お知らせbot",
+                    "description": "高専ロボコンHPが更新された時Discordでお知らせします。\n\nいくつかのロボコン部で導入していただいています。",
+                    "linkText": "GitHubリポジトリ",
+                    "linkUrl": "https://github.com/starkoka/KosenRBKN-notice-bot",
+                    "internal": false,
+                    "detail": {
+                        "body": "高専ロボコン公式HPの更新を検知し、DiscordのWebhookを通じて通知するBOTです。複数の高専ロボコン部で導入されています。",
+                        "images": [],
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/starkoka/KosenRBKN-notice-bot",
+                                "icon": "github"
+                            }
+                        ],
+                        "embeds": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "コンテスト・修了系",
+            "description": "参加したコンテストや修了した講座等",
+            "items": [
+                {
+                    "slug": null,
+                    "title": "AtCoder",
+                    "description": "競技プログラミングのコンテストサイトです。\n\nABC/AHCを中心に、たまにARCにも出場しています。",
+                    "type": "atcoder",
+                    "linkText": "AtCoderアカウント",
+                    "linkUrl": "https://atcoder.jp/users/kokastar",
+                    "internal": false
+                },
+                {
+                    "slug": "KosenRobocon",
+                    "title": "高専ロボコン",
+                    "description": "高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2024年はAチームの制御を担当しています。",
+                    "linkText": "詳細はこちら",
+                    "internal": true,
+                    "detail": {
+                        "body": "高専ロボコン2022〜2024に木更津高専から出場しています。2022/2023年はBチームのリーダーとして参加し、2024年はAチームの制御担当として活動しています。",
+                        "images": [
+                            "/images/works/KosenRBKN/1.png",
+                            "/images/works/KosenRBKN/2.png",
+                            "/images/works/KosenRBKN/3.png",
+                            "/images/works/KosenRBKN/4.png",
+                            "/images/works/KosenRBKN/5.png",
+                            "/images/works/KosenRBKN/6.png",
+                            "/images/works/KosenRBKN/7.png"
+                        ],
+                        "links": [],
+                        "embeds": []
+                    }
+                },
+                {
+                    "slug": null,
+                    "title": "DIVER OSINT CTF 2024",
+                    "description": "現実世界指向のOSINT CTFです。\n\nUFO_TH_JPのメンバーとして参加して、10位でした。\n\n僕個人としては2問正解しました。",
+                    "linkText": "チームのWriteUp",
+                    "linkUrl": "https://hackmd.io/@YumaOchi/rJ52sqGH0",
+                    "internal": false
+                },
+                {
+                    "slug": null,
+                    "title": "GCI 2023 Winter",
+                    "description": "東大松尾研が開催するデータサイエンスの講座です。\n\nGCI 2023 Winterを修了しました。",
+                    "linkText": "GCI公式HP",
+                    "linkUrl": "https://gci2.t.u-tokyo.ac.jp/",
+                    "internal": false
+                },
+                {
+                    "slug": null,
+                    "title": "AtCoder Junior League 2023",
+                    "description": "学校別対抗中高生向け競技プログラミングリーグです。\n\n木更津高専所属として、高校部門14位でした。\n\n高2部門において個人としては43位でした。",
+                    "linkText": "AJL2023公式サイト",
+                    "linkUrl": "https://atcoder.jp/contests/ajl2023",
+                    "internal": false
+                },
+                {
+                    "slug": null,
+                    "title": "日本情報オリンピック 2023/2024",
+                    "description": "一次予選は4分で4問全問正解しました。\n\n二次予選は174点で本戦出場権は獲得できませんでした。\n\n二次予選の得点は100-47-23-4-0点でした(ボーダー240点)。",
+                    "linkText": "JOI2023/2024 二次予選問題",
+                    "linkUrl": "https://atcoder.jp/contests/joi2024yo2",
+                    "internal": false
+                }
+            ]
+        }
+    ]
+}
