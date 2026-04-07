@@ -95,7 +95,13 @@
                             "/images/works/Stellarculator/3.jpg",
                             "/images/works/Stellarculator/4.jpg"
                         ],
-                        "links": [],
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/starkoka/Stellarculator",
+                                "icon": "github"
+                            }
+                        ],
                         "embeds": []
                     }
                 },
@@ -137,11 +143,11 @@
                 {
                     "slug": "KosenRobocon",
                     "title": "高専ロボコン",
-                    "description": "高専ロボコン2022~2024に木更津高専から出場しています。\n\n2022/2023は共にBチームのリーダーでした。\n\n2024年はAチームの制御を担当しています。",
+                    "description": "高専ロボコン2022~2025に木更津高専から出場しています。\n\n2022~2023はBチームのリーダーでした。\n\n2024~2025はAチームのマネージャー兼制御を担当しています。",
                     "linkText": "詳細はこちら",
                     "internal": true,
                     "detail": {
-                        "body": "高専ロボコン2022〜2024に木更津高専から出場しています。2022/2023年はBチームのリーダーとして参加し、2024年はAチームの制御担当として活動しています。",
+                        "body": "高専ロボコン2022〜2025に木更津高専から出場しています。2022/2023年はBチームのリーダーとして参加し、2024〜2025年はAチームのマネージャー兼制御を担当しています。",
                         "images": [
                             "/images/works/KosenRBKN/1.png",
                             "/images/works/KosenRBKN/2.png",

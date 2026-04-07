@@ -24,14 +24,14 @@
         {
             "date": "2023-01",
             "title": "GCI 2023 Winter 修了",
-            "description": "東大松尾研が開催するデータサイエンスの講座を修了",
+            "description": "東大松尾研主催のデータサイエンスの講座を修了",
             "type": "achievement",
             "link": null
         },
         {
             "date": "2023-10",
             "title": "高専ロボコン2023 出場",
-            "description": "Bチームのリーダーとして2年連続参加",
+            "description": "Bチームのリーダー及び制御担当として参加",
             "type": "contest",
             "link": "/works/KosenRobocon"
         },
@@ -60,7 +60,7 @@
             "date": "2024-03",
             "title": "Kloudハッカソン#4 優秀賞",
             "description": "「Hizk」でKloudハッカソン#4 優秀賞を受賞",
-            "type": "achievement",
+            "type": "contest",
             "link": "/works/Hizk"
         },
         {
@@ -68,12 +68,75 @@
             "title": "DIVER OSINT CTF 2024",
             "description": "UFO_TH_JPチームとして参加し10位",
             "type": "contest",
-            "link": null
+            "link": "https://hackmd.io/@YumaOchi/rJ52sqGH0"
+        },
+        {
+            "date": "2024-09",
+            "title": "高専ロボコン2024 地区大会マブチモーター賞受賞",
+            "description": "Aチームのマネージャー兼制御を担当\nマブチモーター賞を受賞し全国大会出場",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
         },
         {
             "date": "2024-10",
-            "title": "高専ロボコン2024 出場",
-            "description": "Aチームの制御を担当",
+            "title": "AtCoder Junior League 2024 Summer",
+            "description": "高校部門 A 43位 / H26位\n高3個人部門 A 33位 / H 16位",
+            "type": "contest",
+            "link": "https://atcoder.jp/contests/ajl2024summer"
+        },
+        {
+            "date": "2024-10",
+            "title": "高専プロコン2024 競技部門出場",
+            "description": "木更津高専代表として，競技部門に出場",
+            "type": "contest",
+            "link": "https://www.kisarazu.ac.jp/news/%E7%AC%AC35%E5%9B%9E%E5%85%A8%E5%9B%BD%E9%AB%98%E7%AD%89%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88/"
+        },
+        {
+            "date": "2024-11",
+            "title": "高専ロボコン2024 全国大会デザイン賞受賞",
+            "description": "マネージャー兼制御兼操縦として出場し、デザイン賞を受賞",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
+        },
+        {
+            "date": "2024-12",
+            "title": "成人",
+            "description": "12月14日に18歳になり、法律上の成人となる",
+            "type": "life",
+            "link": null
+        },
+        {
+            "date": "2025-02",
+            "title": "日本情報オリンピック 2024/2025",
+            "description": "一次予選 全問正解、二次予選 290点で本戦出場\n本戦では153点(100-53-0-0)獲得",
+            "type": "contest",
+            "link": "https://www.ioi-jp.org/joi/2024/2025-joi-ho-list"
+        },
+        {
+            "date": "2025-06",
+            "title": "DIVER OSINT CTF 2025",
+            "description": "CTFチーム「m01nm01n」として出場し全体5位",
+            "type": "contest",
+            "link": "https://hackmd.io/@tsuneki/HyfEQFGXlg"
+        },
+        {
+            "date": "2025-10",
+            "title": "木更津高専 研究室配属",
+            "description": "情報工学科 知能情報システム研究室に配属",
+            "type": "education",
+            "link": null
+        },
+        {
+            "date": "2025-10",
+            "title": "高専ロボコン2025 地区大会出場",
+            "description": "Aチームのマネージャー兼制御を担当\n準決勝進出・地区大会最高得点獲得・全国大会出場",
+            "type": "contest",
+            "link": "/works/KosenRobocon"
+        },
+        {
+            "date": "2025-11",
+            "title": "高専ロボコン2025 全国大会出場",
+            "description": "マネージャー兼制御兼操縦として2年連続出場",
             "type": "contest",
             "link": "/works/KosenRobocon"
         }

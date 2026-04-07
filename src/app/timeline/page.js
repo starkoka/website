@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SectionTitle from "../../../components/title";
+import TextWithBreaks from "../../../components/TextWithBreaks";
 import timelineData from "../../data/timeline.json";
 
 const typeIcons = {
@@ -30,7 +31,7 @@ function TimelineCard({ event, index }) {
                 {event.title}
             </h3>
             <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                {event.description}
+                <TextWithBreaks text={event.description} />
             </p>
             {event.link && (
                 <div className="mt-2">
@@ -52,6 +53,14 @@ function TimelineCard({ event, index }) {
     const cardStyle = { animationDelay: `${index * 80}ms` };
 
     if (event.link) {
+        const isExternal = !event.link.startsWith('/');
+        if (isExternal) {
+            return (
+                <a href={event.link} target="_blank" rel="noopener noreferrer" className={`${cardClass} block`} style={cardStyle}>
+                    {content}
+                </a>
+            );
+        }
         return (
             <Link href={event.link} className={`${cardClass} block`} style={cardStyle}>
                 {content}

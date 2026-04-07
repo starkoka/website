@@ -5,11 +5,14 @@ import Footer from "../../components/footer";
 import ThemeProvider from "../../components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp" });
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+});
 
 export const metadata = {
   title: "kokastar.dev",
-  description: "kokastarのポートフォリオサイト。競技プログラミング・高専ロボコンを中心に活動する高専生の自己紹介と作品集。",
+  description: "kokastarのサイトです",
   openGraph: {
     title: "kokastar.dev",
     description: "kokastarのポートフォリオサイト",
@@ -22,13 +25,35 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`} suppressHydrationWarning>
+    <html
+      lang="ja"
+      className={`${inter.variable} ${notoSansJP.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6366f1" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg"
+          color="#6366f1"
+        />
         <meta name="msapplication-TileColor" content="#6366f1" />
         <meta name="theme-color" content="#6366f1" />
         {/* Prevent FOUC by setting theme before paint */}
@@ -47,7 +72,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col" style={{ background: 'var(--color-bg-primary)' }}>
+      <body
+        className="font-sans antialiased min-h-screen flex flex-col"
+        style={{ background: "var(--color-bg-primary)" }}
+      >
         <ThemeProvider>
           <Header />
           <main className="flex-grow">{children}</main>

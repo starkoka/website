@@ -1,3 +1,5 @@
+import TextWithBreaks from "./TextWithBreaks";
+
 const SkillCard = ({ title, description, iconURL }) => {
     return (
         <div className="card p-4 md:p-5 w-full flex flex-col items-center text-center">
@@ -13,7 +15,7 @@ const SkillCard = ({ title, description, iconURL }) => {
                 />
             )}
             <p className="text-xs md:text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                {description}
+                <TextWithBreaks text={description} />
             </p>
         </div>
     );

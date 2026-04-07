@@ -1,47 +1,53 @@
 {
-    "name": "kokastar",
-    "displayName": "kokastar",
-    "altName": "こかすた〜",
-    "bio": "競技プログラミング・高専ロボコンを中心に色々やってる高専生です。主にC++/Python/JavaScriptを扱っています。",
-    "avatar": "/images/starkoka.jpeg",
-    "affiliation": "木更津高専 情報工学科",
-    "clubs": [
-        "ロボット研究同好会",
-        "プログラミング研究同好会"
-    ],
-    "other": [
-        "Japanese Scratch-Wiki 管理者"
-    ],
-    "socials": [
-        {
-            "name": "Twitter",
-            "url": "https://twitter.com/kokastar_dev",
-            "icon": "twitter"
-        },
-        {
-            "name": "GitHub",
-            "url": "https://github.com/starkoka",
-            "icon": "github"
-        },
-        {
-            "name": "AtCoder",
-            "url": "https://atcoder.jp/users/kokastar",
-            "icon": "atcoder"
-        },
-        {
-            "name": "note",
-            "url": "https://note.com/kokastar",
-            "icon": "note"
-        },
-        {
-            "name": "Zenn",
-            "url": "https://zenn.dev/kokastar",
-            "icon": "zenn"
-        },
-        {
-            "name": "Qiita",
-            "url": "https://qiita.com/kokastar",
-            "icon": "qiita"
-        }
-    ]
+  "name": "kokastar",
+  "displayName": "kokastar",
+  "altName": "こかすた〜",
+  "bio": "高専ロボコン・競技プログラミングを中心に色々やってる高専生です。\nソフトウェアだけでなくハードウェアにも取り組んでいます。",
+  "avatar": "/images/starkoka.jpeg",
+  "affiliation": "木更津高専 情報工学科",
+  "clubs": [
+    "ロボット研究同好会",
+    "プログラミング研究同好会"
+  ],
+  "other": [
+    "Japanese Scratch-Wiki 管理者"
+  ],
+  "socials": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/kokastar_dev",
+      "icon": "twitter",
+      "contact": true
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/starkoka",
+      "icon": "github",
+      "contact": false
+    },
+    {
+      "name": "AtCoder",
+      "url": "https://atcoder.jp/users/kokastar",
+      "icon": "atcoder",
+      "contact": false
+    },
+    {
+      "name": "note",
+      "url": "https://note.com/kokastar",
+      "icon": "note",
+      "contact": false
+    },
+    {
+      "name": "Zenn",
+      "url": "https://zenn.dev/kokastar",
+      "icon": "zenn",
+      "contact": false
+    },
+    {
+      "name": "Qiita",
+      "url": "https://qiita.com/kokastar",
+      "icon": "qiita",
+      "contact": false
+    }
+  ]
 }

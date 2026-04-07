@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import profile from '../src/data/profile.json';
 import SocialIcon from './SocialIcon';
+import TextWithBreaks from './TextWithBreaks';
 
 export default function Footer() {
     const [showTop, setShowTop] = useState(false);
@@ -53,7 +54,7 @@ export default function Footer() {
                                 <span style={{ color: 'var(--color-text-muted)' }}>.dev</span>
                             </Link>
                             <p className="mt-2 text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                {profile.bio}
+                                <TextWithBreaks text={profile.bio} />
                             </p>
                         </div>
 
