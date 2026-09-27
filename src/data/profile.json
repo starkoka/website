@@ -2,15 +2,84 @@
   "name": "kokastar",
   "displayName": "kokastar",
   "altName": "こかすた〜",
-  "bio": "高専ロボコン・競技プログラミングを中心に色々やってる高専生です。\nソフトウェアだけでなくハードウェアにも取り組んでいます。",
+  "bio": "木更津高専でソフトウェア・ロボティクス・CTFに取り組む学生です。\nDiscord BOT、競技プログラミング、ロボコン制御、Web開発、物理コンピューティングまで横断して活動しています。",
   "avatar": "/images/starkoka.jpeg",
-  "affiliation": "木更津高専 情報工学科",
+  "affiliation": "木更津工業高等専門学校 情報工学科",
+  "roles": [
+    "学生",
+    "競技プログラマー",
+    "Discord BOT開発者",
+    "ロボコン制御",
+    "OSINT / CTF"
+  ],
   "clubs": [
-    "ロボット研究同好会",
-    "プログラミング研究同好会"
+    "木更津高専ロボット研究同好会",
+    "木更津高専プログラミング研究会"
   ],
   "other": [
-    "Japanese Scratch-Wiki 管理者"
+    "Japanese Scratch Wiki 管理者"
+  ],
+  "infoTiles": [
+    {
+      "title": "所属・コミュニティ",
+      "description": "**木更津工業高等専門学校 情報工学科**\n\n木更津高専ロボット研究同好会 / 木更津高専プログラミング研究会\n\nJapanese Scratch Wiki 管理者"
+    },
+    {
+      "title": "注力分野",
+      "description": "競技プログラミング / Discord BOT / Web開発 / Raspberry Pi / 高専ロボコン制御 / OSINT"
+    },
+    {
+      "title": "公開活動",
+      "description": "Qiita・Zenn・GitHub で技術情報を発信\n\n木更津高専 Advent Calendar を 2023・2024 に主催"
+    },
+    {
+      "title": "公開ハイライト",
+      "description": "Hizk で Kloudハッカソン #4 優秀賞\n\nDIVER OSINT CTF 2024 10位 / 484チーム\n\n高専ロボコン 2024 全国大会デザイン賞"
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Hizk / Kloud #4",
+      "description": "Mozc ベースの次世代IME「Hizk」を開発。Kloudハッカソン #4 で優秀賞を受賞しました。",
+      "link": "/works/Hizk",
+      "external": false
+    },
+    {
+      "title": "高専ロボコン",
+      "description": "2022 から継続参加。2024 は全国大会デザイン賞、2025 も全国大会に出場しています。",
+      "link": "/works/KosenRobocon",
+      "external": false
+    },
+    {
+      "title": "DIVER OSINT CTF 2024",
+      "description": "公開情報の探索・分析を題材にした CTF で、木更津高専チームとして 484 チーム中 10 位でした。",
+      "link": "https://hackmd.io/@YumaOchi/rJ52sqGH0",
+      "external": true
+    },
+    {
+      "title": "木更津高専 Advent Calendar",
+      "description": "Qiita 上で 2023・2024 を主催。両年とも 11 名が参加し、学内の技術記事リレーを運営しました。",
+      "link": "https://qiita.com/advent-calendar/2024/nit_kisarazu",
+      "external": true
+    }
+  ],
+  "focusAreas": [
+    {
+      "title": "ソフトウェア開発",
+      "description": "C / C++、TypeScript / JavaScript、Python を使い、IME、Discord BOT、Web アプリ、CLI などを実装しています。"
+    },
+    {
+      "title": "ロボティクス",
+      "description": "高専ロボコンでリーダー、マネージャー、制御、操縦を担当し、ソフトとハードの統合まで扱っています。"
+    },
+    {
+      "title": "セキュリティ / OSINT",
+      "description": "OSINT CTF で公開情報の探索・分析に取り組み、チーム戦で上位入賞の実績があります。"
+    },
+    {
+      "title": "技術発信",
+      "description": "Qiita や Zenn に開発環境構築、ブラウザ検証、無線通信まわりの知見を公開しています。"
+    }
   ],
   "socials": [
     {

@@ -164,7 +164,7 @@
                 {
                     "slug": null,
                     "title": "DIVER OSINT CTF 2024",
-                    "description": "現実世界指向のOSINT CTFです。\n\nUFO_TH_JPのメンバーとして参加して、10位でした。\n\n僕個人としては2問正解しました。",
+                    "description": "現実世界指向のOSINT CTFです。\n\n木更津高専のチームとして参加し、484チーム中10位でした。\n\n人物・位置情報・衛星・コンテナ追跡などのOSINT課題に取り組みました。",
                     "linkText": "チームのWriteUp",
                     "linkUrl": "https://hackmd.io/@YumaOchi/rJ52sqGH0",
                     "internal": false
