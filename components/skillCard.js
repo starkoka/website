@@ -14,9 +14,9 @@ const SkillCard = ({ title, description, iconURL }) => {
                     loading="lazy"
                 />
             )}
-            <p className="text-xs md:text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+            {description && <p className="text-xs md:text-sm" style={{ color: 'var(--color-text-secondary)' }}>
                 <TextWithBreaks text={description} />
-            </p>
+            </p>}
         </div>
     );
 };

@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import ThemeProvider from "../../components/ThemeProvider";
+import profile from "../data/profile.json";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJP = Noto_Sans_JP({
@@ -12,10 +13,10 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata = {
   title: "kokastar.dev",
-  description: "kokastarのサイトです",
+  description: `${profile.displayName}の制作物と活動記録。`,
   openGraph: {
     title: "kokastar.dev",
-    description: "kokastarのポートフォリオサイト",
+    description: `${profile.displayName}の制作物と活動記録。`,
     url: "https://kokastar.dev",
     siteName: "kokastar.dev",
     locale: "ja_JP",
@@ -52,10 +53,10 @@ export default function RootLayout({ children }) {
         <link
           rel="mask-icon"
           href="/favicon/safari-pinned-tab.svg"
-          color="#6366f1"
+          color="#920809"
         />
-        <meta name="msapplication-TileColor" content="#6366f1" />
-        <meta name="theme-color" content="#6366f1" />
+        <meta name="msapplication-TileColor" content="#920809" />
+        <meta name="theme-color" content="#F6F2F1" />
         {/* Prevent FOUC by setting theme before paint */}
         <script
           dangerouslySetInnerHTML={{
@@ -63,9 +64,11 @@ export default function RootLayout({ children }) {
               (function() {
                 try {
                   var theme = localStorage.getItem('theme');
-                  if (theme && theme !== 'system') {
-                    document.documentElement.setAttribute('data-theme', theme);
+                  if (theme !== 'light' && theme !== 'dark') {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
                   }
+                  document.documentElement.setAttribute('data-theme', theme);
+                  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#140B0C' : '#F6F2F1');
                 } catch(e) {}
               })();
             `,
@@ -77,8 +80,9 @@ export default function RootLayout({ children }) {
         style={{ background: "var(--color-bg-primary)" }}
       >
         <ThemeProvider>
+          <a href="#main-content" className="skip-link">本文へ移動</a>
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main id="main-content" tabIndex={-1} className="flex-grow">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

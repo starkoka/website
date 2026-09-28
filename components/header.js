@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useTheme } from './ThemeProvider';
+import profile from '../src/data/profile.json';
 
 const navLinks = [
     { href: '/', label: 'Top' },
-    { href: '/about', label: 'About' },
     { href: '/works', label: 'Works' },
     { href: '/timeline', label: 'Timeline' },
     { href: '/contact', label: 'Contact' },
@@ -23,9 +23,9 @@ function ThemeToggle() {
     return (
         <button
             onClick={toggle}
-            className="p-2 rounded-lg transition-colors duration-200"
+            className="p-2 min-w-11 min-h-11 rounded-lg transition-colors duration-200 hover:bg-surface-secondary"
             style={{ color: 'var(--color-text-secondary)' }}
-            aria-label="テーマ切替"
+            aria-label={theme === 'light' ? 'ダークモードに切替' : 'ライトモードに切替'}
             title={theme === 'light' ? 'ダークモードに切替' : 'ライトモードに切替'}
         >
             {theme === 'light' && (
@@ -58,19 +58,22 @@ export default function Header() {
         setOpen(false);
     }, [pathname]);
 
-    // Prevent body scroll when mobile menu is open
+    // The mobile navigation is an inline disclosure, not a modal.
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-        return () => { document.body.style.overflow = ''; };
+        if (!isOpen) return;
+        const closeOnEscape = (event) => {
+            if (event.key === 'Escape') {
+                setOpen(false);
+                document.getElementById('menu-toggle')?.focus();
+            }
+        };
+        document.addEventListener('keydown', closeOnEscape);
+        return () => document.removeEventListener('keydown', closeOnEscape);
     }, [isOpen]);
 
     return (
         <header
-            className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}
+            className={`sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-lg' : ''}`}
             style={{
                 background: 'var(--color-bg-card)',
                 backdropFilter: 'blur(16px)',
@@ -82,20 +85,21 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="text-xl font-bold tracking-tight shrink-0">
-                        <span className="gradient-text">kokastar</span>
+                        <span className="brand-mark">{profile.displayName}</span>
                         <span style={{ color: 'var(--color-text-muted)' }}>.dev</span>
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-1">
+                    <nav aria-label="メインナビゲーション" className="hidden md:flex items-center gap-1">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                                aria-current={pathname === link.href ? 'page' : undefined}
+                                className="px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:underline"
                                 style={{
-                                    color: pathname === link.href ? 'var(--color-accent)' : 'var(--color-text-secondary)',
-                                    background: pathname === link.href ? 'var(--color-bg-secondary)' : 'transparent',
+                                    color: pathname === link.href ? 'var(--color-link)' : 'var(--color-text-secondary)',
+                                    background: pathname === link.href ? 'var(--color-selection)' : 'transparent',
                                     fontWeight: pathname === link.href ? 700 : 500,
                                 }}
                             >
@@ -111,23 +115,26 @@ export default function Header() {
                     <div className="flex items-center gap-2 md:hidden shrink-0">
                         <ThemeToggle />
                         <button
-                            className="relative z-[60] p-2 rounded-lg transition-colors duration-200"
+                            id="menu-toggle"
+                            className="relative z-[60] p-2 min-w-11 min-h-11 rounded-lg transition-colors duration-200 hover:bg-surface-secondary"
                             onClick={() => setOpen(!isOpen)}
                             aria-label="メニュー"
+                            aria-expanded={isOpen}
+                            aria-controls="mobile-navigation"
                         >
                             <div className="w-6 h-5 relative flex flex-col justify-center gap-1.5">
                                 <span
-                                    className={`block w-6 h-0.5 rounded-full transition-all duration-300 origin-center ${isOpen ? 'rotate-45 translate-y-[4px]' : ''
+                                    className={`block w-6 h-0.5 rounded-full transition-transform duration-300 origin-center ${isOpen ? 'rotate-45 translate-y-[4px]' : ''
                                         }`}
                                     style={{ background: 'var(--color-text-primary)' }}
                                 />
                                 <span
-                                    className={`block w-6 h-0.5 rounded-full transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : ''
+                                    className={`block w-6 h-0.5 rounded-full transition-opacity duration-300 ${isOpen ? 'opacity-0 scale-0' : ''
                                         }`}
                                     style={{ background: 'var(--color-text-primary)' }}
                                 />
                                 <span
-                                    className={`block w-6 h-0.5 rounded-full transition-all duration-300 origin-center ${isOpen ? '-rotate-45 -translate-y-[4px]' : ''
+                                    className={`block w-6 h-0.5 rounded-full transition-transform duration-300 origin-center ${isOpen ? '-rotate-45 -translate-y-[4px]' : ''
                                         }`}
                                     style={{ background: 'var(--color-text-primary)' }}
                                 />
@@ -139,22 +146,24 @@ export default function Header() {
 
             {/* Mobile Menu */}
             <div
-                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                id="mobile-navigation"
+                hidden={!isOpen}
+                className="md:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto"
                 style={{
                     background: 'var(--color-bg-card)',
                     borderTop: isOpen ? '1px solid var(--color-border)' : 'none',
                 }}
             >
-                <nav className="px-4 py-4 space-y-1">
+                <nav aria-label="モバイルナビゲーション" className="px-4 py-4 space-y-1">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200"
+                            aria-current={pathname === link.href ? 'page' : undefined}
+                            className="block px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 hover:underline"
                             style={{
-                                color: pathname === link.href ? 'var(--color-accent)' : 'var(--color-text-secondary)',
-                                background: pathname === link.href ? 'var(--color-bg-secondary)' : 'transparent',
+                                color: pathname === link.href ? 'var(--color-link)' : 'var(--color-text-secondary)',
+                                background: pathname === link.href ? 'var(--color-selection)' : 'transparent',
                                 fontWeight: pathname === link.href ? 700 : 500,
                             }}
                             onClick={() => setOpen(false)}

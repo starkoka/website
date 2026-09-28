@@ -2,72 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== Design Tokens ===== */
+/* Brand and semantic color roles. Components use the semantic names below. */
 :root {
-  /* Light theme colors */
-  --color-bg-primary: #f8fafc;
-  --color-bg-secondary: #f1f5f9;
-  --color-bg-card: rgba(255, 255, 255, 0.7);
-  --color-bg-card-hover: rgba(255, 255, 255, 0.9);
-  --color-border: rgba(148, 163, 184, 0.3);
-  --color-border-hover: rgba(99, 102, 241, 0.5);
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
-  --color-accent: #6366f1;
-  --color-accent-light: #818cf8;
-  --color-accent-dark: #4f46e5;
-  --color-gradient-start: #6366f1;
-  --color-gradient-mid: #8b5cf6;
-  --color-gradient-end: #a855f7;
-  --color-hero-bg: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 50%, #fae8ff 100%);
+  --color-brand: #920809;
+  --color-brand-600: #a61a1b;
+  --color-brand-500: #bc2d2f;
+  --color-brand-400: #d65a5c;
+  --color-brand-300: #e89a9c;
+  --color-brand-200: #f0c8c1;
+  --color-background: #f6f2f1;
+  --color-surface: #fffdfc;
+  --color-surface-secondary: #f1e8e6;
+  --color-border: #d9c9c5;
+  --color-border-strong: #7a6662;
+  --color-text: #241716;
+  --color-text-secondary: #5e4a47;
+  --color-text-muted: #78635f;
+  --color-link: var(--color-brand);
+  --color-link-hover: #6f1a1d;
+  --color-focus: var(--color-brand);
+  --color-brand-mark: var(--color-brand);
+  --color-selection: #eed9d4;
+  --color-button-bg: var(--color-brand);
+  --color-button-text: #fffdfc;
+  --color-timeline-life: #356657;
+  --color-timeline-education: #635954;
+  --color-timeline-contest: #79502b;
+  --color-timeline-achievement: var(--color-brand);
+  --color-timeline-label-text: #fffdfc;
+
+  /* Compatibility aliases for existing components and Tailwind utilities. */
+  --color-bg-primary: var(--color-background);
+  --color-bg-secondary: var(--color-surface-secondary);
+  --color-bg-card: var(--color-surface);
+  --color-bg-card-hover: var(--color-surface-secondary);
+  --color-border-hover: var(--color-border-strong);
+  --color-text-primary: var(--color-text);
+  --color-accent: var(--color-link);
+  --color-accent-light: var(--color-link-hover);
+  --color-accent-dark: var(--color-link-hover);
   --color-shadow: rgba(0, 0, 0, 0.08);
-  --color-shadow-hover: rgba(99, 102, 241, 0.2);
-  --backdrop-blur: blur(16px);
+  --color-shadow-hover: rgba(36, 23, 22, 0.12);
 }
 
 [data-theme="dark"] {
-  --color-bg-primary: #0b0f1a;
-  --color-bg-secondary: #111827;
-  --color-bg-card: rgba(30, 41, 59, 0.6);
-  --color-bg-card-hover: rgba(30, 41, 59, 0.85);
-  --color-border: rgba(99, 102, 241, 0.15);
-  --color-border-hover: rgba(129, 140, 248, 0.5);
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #64748b;
-  --color-accent: #818cf8;
-  --color-accent-light: #a5b4fc;
-  --color-accent-dark: #6366f1;
-  --color-gradient-start: #6366f1;
-  --color-gradient-mid: #8b5cf6;
-  --color-gradient-end: #a855f7;
-  --color-hero-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e1b4b 100%);
+  --color-background: #140b0c;
+  --color-surface: #1c1011;
+  --color-surface-secondary: #281617;
+  --color-border: #4b2a2c;
+  --color-border-strong: #b89f99;
+  --color-text: #f5eeec;
+  --color-text-secondary: #d3c0bc;
+  --color-text-muted: #b89f99;
+  --color-link: var(--color-brand-300);
+  --color-link-hover: var(--color-brand-200);
+  --color-focus: var(--color-brand-200);
+  --color-brand-mark: var(--color-brand-300);
+  --color-selection: #3a1e20;
+  --color-button-bg: var(--color-brand-600);
+  --color-button-text: #fffdfc;
+  --color-timeline-life: #9acbb4;
+  --color-timeline-education: #c4bbb5;
+  --color-timeline-contest: #ddb887;
+  --color-timeline-achievement: var(--color-brand-300);
+  --color-timeline-label-text: #140b0c;
   --color-shadow: rgba(0, 0, 0, 0.3);
-  --color-shadow-hover: rgba(99, 102, 241, 0.3);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --color-bg-primary: #0b0f1a;
-    --color-bg-secondary: #111827;
-    --color-bg-card: rgba(30, 41, 59, 0.6);
-    --color-bg-card-hover: rgba(30, 41, 59, 0.85);
-    --color-border: rgba(99, 102, 241, 0.15);
-    --color-border-hover: rgba(129, 140, 248, 0.5);
-    --color-text-primary: #f1f5f9;
-    --color-text-secondary: #cbd5e1;
-    --color-text-muted: #64748b;
-    --color-accent: #818cf8;
-    --color-accent-light: #a5b4fc;
-    --color-accent-dark: #6366f1;
-    --color-gradient-start: #6366f1;
-    --color-gradient-mid: #8b5cf6;
-    --color-gradient-end: #a855f7;
-    --color-hero-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e1b4b 100%);
-    --color-shadow: rgba(0, 0, 0, 0.3);
-    --color-shadow-hover: rgba(99, 102, 241, 0.3);
-  }
+  --color-shadow-hover: rgba(0, 0, 0, 0.45);
 }
 
 /* ===== Base Styles ===== */
@@ -75,6 +75,17 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Shared keyboard and motion accessibility; page styling stays local. */
+html { scroll-padding-top: 80px; color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+a, button { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 100; padding: 12px 20px; background: var(--color-bg-primary); color: var(--color-text-primary); transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
 /* ===== Animations ===== */
@@ -186,8 +197,6 @@ body {
 /* ===== Card base ===== */
 .card {
   background: var(--color-bg-card);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
   border: 1px solid var(--color-border);
   border-radius: 1rem;
   box-shadow: 0 4px 24px var(--color-shadow);
@@ -203,13 +212,11 @@ button.card:hover,
   transform: translateY(-4px);
 }
 
-/* ===== Section title gradient ===== */
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+a.card, button.card, .card-interactive { border-color: var(--color-border-strong); }
+
+/* Solid headings keep photographs and work samples as the visual focus. */
+.solid-heading { color: var(--color-text-primary); }
+.brand-mark { color: var(--color-brand-mark); }
 
 /* ===== Skeleton loader ===== */
 .skeleton {
@@ -248,11 +255,11 @@ button.card:hover,
 }
 
 .prose-custom a {
-  color: var(--color-accent);
+  color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .prose-custom a:hover {
-  color: var(--color-accent-light);
+  color: var(--color-link-hover);
 }

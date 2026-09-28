@@ -1,0 +1,58 @@
+{
+  "worksCategories": [
+    {
+      "id": "creation",
+      "label": "制作物"
+    },
+    {
+      "id": "research",
+      "label": "研究発表"
+    },
+    {
+      "id": "competition",
+      "label": "競技・講座"
+    }
+  ],
+  "timelineFilters": [
+    {
+      "id": "contest",
+      "label": "大会",
+      "types": [
+        "contest"
+      ]
+    },
+    {
+      "id": "research",
+      "label": "研究",
+      "types": [
+        "research"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "資格・学習",
+      "types": [
+        "achievement",
+        "qualification",
+        "score"
+      ]
+    },
+    {
+      "id": "background",
+      "label": "経歴",
+      "types": [
+        "life",
+        "education"
+      ]
+    }
+  ],
+  "featuredActivityIds": [
+    "KosenRobocon",
+    "Hizk",
+    "Stellarculator"
+  ],
+  "socialActivityNames": [
+    "Twitter",
+    "GitHub"
+  ]
+}

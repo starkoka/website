@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic' // defaults to auto
 const axios = require('axios');
+const profile = require('../../../data/profile.json');
 
 const colors = [
     "#808080", // gray
@@ -15,7 +16,7 @@ const colors = [
 export async function GET(req) {
     const params = req.nextUrl.searchParams;
     const query = params.get('type');
-    const atcoderId = params.get('username') ?? "kokastar";
+    const atcoderId = params.get('username') ?? profile.socials.find((social) => social.name === 'AtCoder').url.split('/').pop();
 
     const res = {
         "schemaVersion": 1,

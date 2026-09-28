@@ -1,56 +1,77 @@
+import Image from "next/image";
+import Link from "next/link";
 import SectionTitle from "../../../components/title";
-import ProjectCard from "../../../components/projectCard";
 import AtcoderTile from "../../../components/atcoderTile";
-import projects from "../../data/projects.json";
+import { getActivityLink, getActivityOverview, getMedia, getSocial, getWorksCategories } from "../../lib/content";
+import styles from "../inner.module.css";
+
+function getPreview(item) {
+    return getMedia(item, item.previewImageId || item.homepage?.imageId);
+}
+
+function WorkRow({ item }) {
+    const preview = getPreview(item);
+    const event = item.events[0];
+    const overview = getActivityOverview(item);
+    const link = getActivityLink(item, event);
+    const isExternal = link && !link.href.startsWith('/');
+
+    if (item.type === "atcoder") {
+        return <AtcoderTile title={item.title} description={item.description} profileUrl={getSocial('AtCoder').url} className={styles.atcoderRow} />;
+    }
+
+    return (
+        <article className={styles.workRow}>
+            <div className={styles.workBody}>
+                <h3 className={styles.workTitle}>{item.title}</h3>
+                {event?.paperTitle && <p className={styles.paperTitle}>論文「{event.paperTitle}」</p>}
+                {overview && <p className={styles.workDescription}>{overview}</p>}
+                {link && (
+                    <Link
+                        className={styles.workLink}
+                        href={link.href}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                    >
+                        {item.homepage?.linkText || item.linkText || link.label}
+                    </Link>
+                )}
+            </div>
+            {preview && (
+                <Image
+                    className={styles.workImage}
+                    src={preview.src}
+                    alt={preview.alt}
+                    width={preview.width}
+                    height={preview.height}
+                    sizes="(max-width: 600px) 100vw, 200px"
+                />
+            )}
+        </article>
+    );
+}
 
 export default function WorksPage() {
+    const categories = getWorksCategories();
     return (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-            <SectionTitle
-                title="Works"
-                description="今までに作ったものや取り組んできたものを紹介しています。"
-            />
-
-            {projects.categories.map((category) => (
-                <div key={category.name} className="mb-12">
-                    {/* Category Header */}
-                    <div className="card p-4 md:p-6 mb-6 text-center">
-                        <h2 className="text-xl md:text-2xl font-bold gradient-text mb-1">{category.name}</h2>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                            {category.description}
-                        </p>
-                    </div>
-
-                    {/* Project Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {category.items.map((item) => {
-                            if (item.type === 'atcoder') {
-                                return (
-                                    <AtcoderTile
-                                        key={item.title}
-                                        title={item.title}
-                                        description={item.description}
-                                    />
-                                );
-                            }
-
-                            const linkUrl = item.internal
-                                ? `/works/${item.slug}`
-                                : item.linkUrl;
-
-                            return (
-                                <ProjectCard
-                                    key={item.title}
-                                    title={item.title}
-                                    description={item.description}
-                                    linkText={item.linkText}
-                                    linkUrl={linkUrl}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
-            ))}
+        <div className={styles.worksLayout}>
+            <div className={styles.worksHeading}><SectionTitle title="Works" /></div>
+            <nav className={styles.worksCategoryNav} aria-label="Worksのカテゴリ">
+                {categories.map((category, index) => (
+                    <a key={category.id} href={`#works-category-${index}`}>{category.label}</a>
+                ))}
+            </nav>
+            <div className={styles.worksSections}>
+                {categories.map((category, index) => {
+                    const items = category.items;
+                    return (
+                        <section className={styles.section} key={category.id} aria-labelledby={`works-category-${index}`}>
+                            <h2 className={styles.sectionHeading} id={`works-category-${index}`}>{category.label}</h2>
+                            <div>{items.map((item) => <WorkRow key={item.id} item={item} />)}</div>
+                        </section>
+                    );
+                })}
+            </div>
         </div>
     );
 }

@@ -27,6 +27,7 @@ export default function ThemeProvider({ children }) {
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#140B0C' : '#F6F2F1');
     }, [theme]);
 
     const updateTheme = (newTheme) => {

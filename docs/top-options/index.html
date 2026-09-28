@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>トップページ 3案の比較 | kokastar</title><link rel="stylesheet" href="comparison.css"></head>
+<body><main class="comparison"><header><p class="project">kokastar.dev ／ トップページの構成検討</p><h1>同じ活動を、3つの読み方で。</h1><p>本人の紹介、制作物、担当内容の順序を変えた簡易モックです。既存ページには適用していません。</p><p class="reference">参考：<a href="https://brittanychiang.com/">Brittany Chiang</a>。PCで本人情報を左に残す配置をA案に取り入れました。B・C案は、写真と記録を軸にした別の構成です。</p></header>
+<div class="options">
+<article><h2><span>A</span>プロフィールを左に置く</h2><p>人物と制作物を、並べて読む。</p><a class="thumbnail" href="a.html" aria-label="A案を開く"><img src="screenshots/a-1440.png" width="1440" height="1500" alt="A案のPC表示。左にプロフィール、右に作品と説明"></a><pre aria-label="A案の情報構造">本人紹介（左に固定）│制作物と担当
+外部プロフィール    │小写真＋説明
+ページ内の目次      │活動の記録</pre><p><strong>写真の役割</strong>　作品を見分ける補助。</p><p><strong>向いている用途</strong>　担当内容を読み比べる。本人の情報やGitHubへすぐ移動する。</p><p class="tradeoff">弱点：作品画像の迫力は控えめ。モバイルではプロフィールが先に入る。</p><div class="links"><a href="a.html">A案を開く</a><a href="screenshots/a-390.png">モバイル画像</a></div></article>
+<article><h2><span>B</span>制作物の写真から入る</h2><p>実物を見て、説明を読む。</p><a class="thumbnail" href="b.html" aria-label="B案を開く"><img src="screenshots/b-1440.png" width="1440" height="1500" alt="B案のPC表示。大きな縦写真と横長の制作画面"></a><pre aria-label="B案の情報構造">本人紹介・外部プロフィール
+ロボット縦写真（大）│IME画面＋説明
+担当内容            │電卓写真＋説明</pre><p><strong>写真の役割</strong>　ページの主役。素材ごとに比率と大きさを変える。</p><p><strong>向いている用途</strong>　まず何を作ったか知る。ハードとソフトの両方を見る。</p><p class="tradeoff">弱点：ロボットの印象が強い。モバイルでは画像の分だけ縦に長くなる。</p><div class="links"><a href="b.html">B案を開く</a><a href="screenshots/b-390.png">モバイル画像</a></div></article>
+<article><h2><span>C</span>制作の記録を読む</h2><p>年と担当内容から、活動を知る。</p><a class="thumbnail" href="c.html" aria-label="C案を開く"><img src="screenshots/c-1440.png" width="1440" height="1500" alt="C案のPC表示。年・制作内容・補足画像の順に並ぶ記録"></a><pre aria-label="C案の情報構造">本人紹介・外部プロフィール
+2025 │ ロボコンの担当 │ 小写真
+2024 │ IME開発        │ 変換画面
+2023 │ Webサイトの共同開発</pre><p><strong>写真の役割</strong>　説明を補う資料。画像のない作品も同じ流れに置く。</p><p><strong>向いている用途</strong>　制作の蓄積と役割を追う。共同制作も一緒に紹介する。</p><p class="tradeoff">弱点：第一印象は落ち着く。制作年が分からない作品は抜粋に載せにくい。</p><div class="links"><a href="c.html">C案を開く</a><a href="screenshots/c-390.png">モバイル画像</a></div></article>
+</div>
+<section class="preview" aria-labelledby="preview-title"><div class="preview-heading"><div><h2 id="preview-title">表示幅を変えて比較</h2><p>モック内をスクロールできます。リンクは既存サイトへ移動します。</p></div><a id="standalone" href="a.html">選択中の案を単独で開く</a></div><div class="controls"><label>構成 <select id="variant"><option value="a">A：プロフィールを左に置く</option><option value="b">B：制作物の写真から入る</option><option value="c">C：制作の記録を読む</option></select></label><label>表示幅 <select id="device"><option value="1200">PC（1200px）</option><option value="390">モバイル（390px）</option><option value="320">小さい画面（320px）</option></select></label></div><div class="stage-wrap"><div class="stage" id="stage"><iframe id="frame" src="a.html" title="A案のプレビュー"></iframe></div></div></section>
+<section class="notes"><h2>比較の前提</h2><p>文章は既存のプロフィール・制作物・活動履歴データに基づきます。ロボコンでは確認できる担当を明記し、それ以外の作品で細かな担当分担を推測していません。写真の撮影年や機体の受賞は断定していません。</p><p>A・Bは同じ3作品を、Cは年が確認できる3件を抜粋しています。Cの画像に添えた年は活動の年であり、撮影年ではありません。簡易モックのためテーマ切替や動的データ連携は含めていません。</p><p><a href="README.md">情報構造・設計判断・文言の根拠を読む</a></p></section><footer>2026-09-27 ／ 比較用モック</footer></main>
+<script>
+const variant=document.getElementById('variant'),device=document.getElementById('device'),frame=document.getElementById('frame'),stage=document.getElementById('stage');
+function size(){const width=Number(device.value),height=width>700?900:844,scale=Math.min(1,stage.parentElement.clientWidth/width);stage.style.width=width*scale+'px';stage.style.height=height*scale+'px';frame.style.width=width+'px';frame.style.height=height+'px';frame.style.transform='scale('+scale+')';}
+variant.addEventListener('change',()=>{frame.src=variant.value+'.html';frame.title=variant.value.toUpperCase()+'案のプレビュー';document.getElementById('standalone').href=frame.src;});device.addEventListener('change',size);new ResizeObserver(size).observe(stage.parentElement);size();
+</script></body></html>

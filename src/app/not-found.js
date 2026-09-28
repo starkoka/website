@@ -4,7 +4,7 @@ export default function NotFound() {
     return (
         <div className="min-h-[70vh] flex items-center justify-center px-4">
             <div className="card p-8 md:p-12 max-w-md w-full text-center">
-                <div className="text-6xl md:text-7xl font-bold gradient-text mb-4">404</div>
+                <div className="text-6xl md:text-7xl font-bold solid-heading mb-4">404</div>
                 <h1 className="text-xl md:text-2xl font-bold mb-2" style={{ color: 'var(--color-text-primary)' }}>
                     Page Not Found
                 </h1>
@@ -23,8 +23,8 @@ export default function NotFound() {
                 </div>
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
-                    style={{ background: 'var(--color-accent)' }}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:opacity-90 hover:scale-105"
+                    style={{ background: 'var(--color-button-bg)', color: 'var(--color-button-text)' }}
                 >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />

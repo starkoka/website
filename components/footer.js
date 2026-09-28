@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import profile from '../src/data/profile.json';
 import SocialIcon from './SocialIcon';
-import TextWithBreaks from './TextWithBreaks';
 
 export default function Footer() {
     const [showTop, setShowTop] = useState(false);
@@ -16,19 +15,21 @@ export default function Footer() {
     }, []);
 
     const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     };
 
     return (
         <>
             {/* Floating scroll-to-top button */}
             <button
+                tabIndex={showTop ? 0 : -1}
+                aria-hidden={!showTop}
                 onClick={scrollToTop}
-                className={`fixed bottom-6 right-6 z-40 p-3 rounded-full shadow-lg transition-all duration-300 ${showTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+                className={`fixed bottom-6 right-6 z-40 p-3 rounded-full shadow-lg transition-[opacity,transform] duration-300 ${showTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
                     }`}
                 style={{
-                    background: 'var(--color-accent)',
-                    color: '#fff',
+                    background: 'var(--color-button-bg)',
+                    color: 'var(--color-button-text)',
                 }}
                 aria-label="先頭に戻る"
             >
@@ -50,12 +51,9 @@ export default function Footer() {
                         {/* Brand */}
                         <div>
                             <Link href="/" className="text-lg font-bold">
-                                <span className="gradient-text">kokastar</span>
+                                <span className="brand-mark">{profile.displayName}</span>
                                 <span style={{ color: 'var(--color-text-muted)' }}>.dev</span>
                             </Link>
-                            <p className="mt-2 text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                <TextWithBreaks text={profile.bio} />
-                            </p>
                         </div>
 
                         {/* Links */}
@@ -66,7 +64,6 @@ export default function Footer() {
                             <ul className="space-y-2">
                                 {[
                                     { href: '/', label: 'Top' },
-                                    { href: '/about', label: 'About' },
                                     { href: '/works', label: 'Works' },
                                     { href: '/timeline', label: 'Timeline' },
                                     { href: '/contact', label: 'Contact' },
@@ -113,7 +110,7 @@ export default function Footer() {
                     {/* Copyright */}
                     <div className="mt-8 pt-6" style={{ borderTop: '1px solid var(--color-border)' }}>
                         <p className="text-center text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                            &copy; {new Date().getFullYear()} kokastar. All rights reserved.
+                            &copy; {new Date().getFullYear()} {profile.displayName}. All rights reserved.
                         </p>
                     </div>
                 </div>

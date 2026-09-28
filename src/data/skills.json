@@ -1,116 +1,53 @@
 {
-    "categories": [
-        {
-            "name": "★★★",
-            "label": "開発経験が多々あり",
-            "items": [
-                {
-                    "name": "TypeScript / JavaScript",
-                    "icon": "https://skillicons.dev/icons?i=ts,js&theme=light",
-                    "description": "Discord BOT・Webアプリ開発"
-                },
-                {
-                    "name": "C / C++",
-                    "icon": "https://skillicons.dev/icons?i=c,cpp&theme=light",
-                    "description": "競プロ・IME改修・組込み"
-                },
-                {
-                    "name": "Python",
-                    "icon": "https://skillicons.dev/icons?i=python&theme=light",
-                    "description": "Raspberry Pi・自動化・データ処理"
-                },
-                {
-                    "name": "discord.js",
-                    "icon": "https://skillicons.dev/icons?i=discordjs&theme=light",
-                    "description": "複数のBOT開発"
-                },
-                {
-                    "name": "Linux / Bash",
-                    "icon": "https://skillicons.dev/icons?i=linux,bash&theme=light",
-                    "description": "日常利用・開発環境構築"
-                },
-                {
-                    "name": "Git / GitHub",
-                    "icon": "https://skillicons.dev/icons?i=git,github&theme=light",
-                    "description": "日常的に使用"
-                }
-            ]
-        },
-        {
-            "name": "★★",
-            "label": "多少の開発経験あり",
-            "items": [
-                {
-                    "name": "Next.js / React",
-                    "icon": "https://skillicons.dev/icons?i=nextjs,react&theme=light",
-                    "description": "ポートフォリオ・Webフロントエンド"
-                },
-                {
-                    "name": "Prisma",
-                    "icon": "https://skillicons.dev/icons?i=prisma&theme=light",
-                    "description": "BOTのデータ管理"
-                },
-                {
-                    "name": "Raspberry Pi",
-                    "icon": "https://skillicons.dev/icons?i=raspberrypi&theme=light",
-                    "description": "GPIO制御・物理コンピューティング"
-                },
-                {
-                    "name": "HTML / CSS",
-                    "icon": "https://skillicons.dev/icons?i=html,css&theme=light",
-                    "description": "Web UI 実装"
-                },
-                {
-                    "name": "WSL / GCC / GDB",
-                    "icon": "https://skillicons.dev/icons?i=linux,vscode&theme=light",
-                    "description": "C/C++ 開発環境構築"
-                }
-            ]
-        },
-        {
-            "name": "★",
-            "label": "チュートリアル程度",
-            "items": [
-                {
-                    "name": "Arduino",
-                    "icon": "https://skillicons.dev/icons?i=arduino&theme=light",
-                    "description": "電子工作"
-                },
-                {
-                    "name": "Docker",
-                    "icon": "https://skillicons.dev/icons?i=docker&theme=light",
-                    "description": "基本的な使い方"
-                },
-                {
-                    "name": "Rust",
-                    "icon": "https://skillicons.dev/icons?i=rust&theme=light",
-                    "description": "学習中"
-                },
-                {
-                    "name": "TeX",
-                    "icon": "https://skillicons.dev/icons?i=latex&theme=light",
-                    "description": "技術資料・数式組版"
-                }
-            ]
-        }
-    ],
-    "otherSkills": [
-        {
-            "title": "AtCoder(競プロ)",
-            "description": "Algorithm / Heuristic ともに継続参加しています。\n\nABC と AHC を中心に出場しています。",
-            "type": "atcoder"
-        },
-        {
-            "title": "OSINT / CTF",
-            "description": "DIVER OSINT CTF 2024 では木更津高専チームとして 10 位 / 484 チームでした。\n\n公開情報の探索・分析を使う問題に継続して取り組んでいます。"
-        },
-        {
-            "title": "ロボティクス",
-            "description": "高専ロボコン 2022-2025 に継続参加しています。\n\n2023 年以降はプログラム・制御も担当しています。"
-        },
-        {
-            "title": "Technical Writing / Community",
-            "description": "Qiita に技術記事を公開し、木更津高専 Advent Calendar を 2023・2024 に主催しました。\n\nWiki やブログも含めて、知見を文書として残すことを重視しています。"
-        }
-    ]
+  "items": [
+    {
+      "name": "C / C++",
+      "icon": "https://skillicons.dev/icons?i=c,cpp&theme=light",
+      "description": "競プロや組み込み開発"
+    },
+    {
+      "name": "Python",
+      "icon": "https://skillicons.dev/icons?i=python&theme=light",
+      "description": "データ処理・ラズパイ"
+    },    {
+      "name": "JavaScript",
+      "icon": "https://skillicons.dev/icons?i=js&theme=light",
+      "description": "Discord Bot・Web"
+    },
+    {
+      "name": "discord.js",
+      "icon": "https://skillicons.dev/icons?i=discordjs&theme=light",
+      "description": "Discord Bot"
+    },
+    {
+      "name": "Linux / Bash",
+      "icon": "https://skillicons.dev/icons?i=linux,bash&theme=light",
+      "description": "Linux・WSLでの開発"
+    },
+    {
+      "name": "Git / GitHub",
+      "icon": "https://skillicons.dev/icons?i=git,github&theme=light",
+      "description": "開発で使用"
+    },
+    {
+      "name": "Raspberry Pi",
+      "icon": "https://skillicons.dev/icons?i=raspberrypi&theme=light",
+      "description": "GPIO制御"
+    },
+    {
+      "name": "Arduino",
+      "icon": "https://skillicons.dev/icons?i=arduino&theme=light",
+      "description": "電子工作"
+    },
+    {
+      "name": "Docker",
+      "icon": "https://skillicons.dev/icons?i=docker&theme=light",
+      "description": "基本操作"
+    },
+    {
+      "name": "TeX",
+      "icon": "https://skillicons.dev/icons?i=latex&theme=light",
+      "description": "技術資料・数式の組版"
+    }
+  ]
 }

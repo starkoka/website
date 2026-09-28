@@ -1,193 +1,113 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import SectionTitle from "../../../components/title";
-import TextWithBreaks from "../../../components/TextWithBreaks";
-import timelineData from "../../data/timeline.json";
+import { getTimelineEvents, getTimelineFilters } from "../../lib/content";
+import { formatTimelineMonth, newestFirst } from "../../lib/timeline";
+import styles from "../inner.module.css";
 
-const typeIcons = {
-    life: '🎂',
-    education: '🎓',
-    contest: '🏆',
-    achievement: '⭐',
-};
-
-function TimelineCard({ event, index }) {
-    const content = (
-        <>
-            <div className="flex items-center gap-2 mb-2">
-                <span
-                    className="text-xs px-2 py-0.5 rounded-full text-white"
-                    style={{ background: timelineData.typeColors[event.type] }}
-                >
-                    {typeIcons[event.type]} {timelineData.typeLabels[event.type]}
-                </span>
-            </div>
-            <h3
-                className="text-base md:text-lg font-bold mb-1"
-                style={{ color: 'var(--color-text-primary)' }}
-            >
-                {event.title}
-            </h3>
-            <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                <TextWithBreaks text={event.description} />
-            </p>
-            {event.link && (
-                <div className="mt-2">
-                    <span
-                        className="inline-flex items-center gap-1 text-xs font-medium"
-                        style={{ color: 'var(--color-accent)' }}
-                    >
-                        詳細を見る
-                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </span>
-                </div>
-            )}
-        </>
-    );
-
-    const cardClass = "card p-4 md:p-5 animate-fade-in-up";
-    const cardStyle = { animationDelay: `${index * 80}ms` };
-
-    if (event.link) {
-        const isExternal = !event.link.startsWith('/');
-        if (isExternal) {
-            return (
-                <a href={event.link} target="_blank" rel="noopener noreferrer" className={`${cardClass} block`} style={cardStyle}>
-                    {content}
-                </a>
-            );
-        }
-        return (
-            <Link href={event.link} className={`${cardClass} block`} style={cardStyle}>
-                {content}
-            </Link>
-        );
-    }
+const filterGroups = getTimelineFilters();
+const timelineEvents = getTimelineEvents();
+const groupByType = new Map(filterGroups.flatMap((group) => group.types.map((type) => [type, group])));
+const validFilters = new Set(filterGroups.map((group) => group.id));
+function normalizeFilter(value) {
+    if (validFilters.has(value)) return value;
+    return groupByType.get(value)?.id || 'all';
+}
+function TimelineRow({ event }) {
+    const related = event.link;
+    const external = related && !related.href.startsWith('/');
 
     return (
-        <div className={cardClass} style={cardStyle}>
-            {content}
-        </div>
+        <article className={styles.activityRow}>
+            <time className={styles.activityDate} dateTime={event.date}>{formatTimelineMonth(event)}</time>
+            <div>
+                <p className={styles.activityType}>{groupByType.get(event.type)?.label}</p>
+                <h3 className={styles.activityTitle}>{event.title}</h3>
+                {event.paperTitle && <p className={styles.paperTitle}>論文「{event.paperTitle}」</p>}
+                {event.description && <p className={styles.activityDescription}>{event.description}</p>}
+                {related && (
+                    <Link
+                        className={styles.activityLink}
+                        href={related.href}
+                        target={external ? '_blank' : undefined}
+                        rel={external ? 'noopener noreferrer' : undefined}
+                    >
+                        {related.label}
+                    </Link>
+                )}
+            </div>
+        </article>
     );
 }
 
 export default function TimelinePage() {
     const [filter, setFilter] = useState('all');
 
-    const events = timelineData.events
-        .filter((e) => filter === 'all' || e.type === filter)
-        .sort((a, b) => a.date.localeCompare(b.date));
+    useEffect(() => {
+        const syncFilter = () => {
+            const value = new URLSearchParams(window.location.search).get('type');
+            setFilter(normalizeFilter(value));
+        };
+        syncFilter();
+        window.addEventListener('popstate', syncFilter);
+        return () => window.removeEventListener('popstate', syncFilter);
+    }, []);
+
+    const changeFilter = (nextFilter) => {
+        setFilter(nextFilter);
+        const url = new URL(window.location.href);
+        if (nextFilter === 'all') url.searchParams.delete('type');
+        else url.searchParams.set('type', nextFilter);
+        window.history.replaceState(null, '', url);
+    };
+
+    const activeGroup = filterGroups.find((group) => group.id === filter);
+    const visibleEvents = timelineEvents.filter((event) => !activeGroup || activeGroup.types.includes(event.type));
+    const plannedEvents = visibleEvents.filter((event) => event.planned).sort(newestFirst);
+    const events = visibleEvents.filter((event) => !event.planned).sort(newestFirst);
 
     return (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-            <SectionTitle
-                title="Timeline"
-                description="これまでの経歴や受賞・活動の記録"
-            />
-
-            {/* Filter buttons */}
-            <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className={styles.narrowPage}>
+            <SectionTitle title="Timeline" />
+            <div className={styles.timelineFilters} role="group" aria-label="活動の種類">
                 <button
-                    onClick={() => setFilter('all')}
-                    className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200"
-                    style={{
-                        background: filter === 'all' ? 'var(--color-accent)' : 'var(--color-bg-card)',
-                        color: filter === 'all' ? '#fff' : 'var(--color-text-secondary)',
-                        border: '1px solid var(--color-border)',
-                    }}
+                    type="button"
+                    onClick={() => changeFilter('all')}
+                    aria-pressed={filter === 'all'}
+                    className={`${styles.timelineFilter} ${filter === 'all' ? styles.timelineFilterActive : ''}`}
                 >
                     すべて
                 </button>
-                {Object.entries(timelineData.typeLabels).map(([key, label]) => (
+                {filterGroups.map((group) => (
                     <button
-                        key={key}
-                        onClick={() => setFilter(key)}
-                        className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200"
-                        style={{
-                            background: filter === key ? timelineData.typeColors[key] : 'var(--color-bg-card)',
-                            color: filter === key ? '#fff' : 'var(--color-text-secondary)',
-                            border: '1px solid var(--color-border)',
-                        }}
+                        key={group.id}
+                        type="button"
+                        onClick={() => changeFilter(group.id)}
+                        aria-pressed={filter === group.id}
+                        className={`${styles.timelineFilter} ${filter === group.id ? styles.timelineFilterActive : ''}`}
                     >
-                        {typeIcons[key]} {label}
+                        {group.label}
                     </button>
                 ))}
             </div>
-
-            {/* Timeline */}
-            <div className="relative">
-                {/* Vertical line */}
-                <div
-                    className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2"
-                    style={{ background: 'var(--color-border)' }}
-                />
-
-                <div className="space-y-8">
-                    {events.map((event, index) => {
-                        const isLeft = index % 2 === 0;
-                        const dateLabel = event.date.replace('-', '年') + '月';
-
-                        return (
-                            <div
-                                key={`${event.date}-${event.title}`}
-                                className="relative flex items-start"
-                            >
-                                {/* Center dot */}
-                                <div
-                                    className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 mt-4 z-10"
-                                    style={{
-                                        background: 'var(--color-bg-primary)',
-                                        borderColor: timelineData.typeColors[event.type],
-                                    }}
-                                />
-
-                                {/* Desktop layout */}
-                                <div className="hidden md:grid md:grid-cols-2 md:gap-8 w-full">
-                                    {/* Left column */}
-                                    <div className={isLeft ? 'text-right pr-8' : 'flex items-start justify-end pr-8'}>
-                                        {isLeft ? (
-                                            <div className="inline-block max-w-md text-left">
-                                                <TimelineCard event={event} index={index} />
-                                            </div>
-                                        ) : (
-                                            <span className="inline-block mt-4 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                                                {dateLabel}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    {/* Right column */}
-                                    <div className={!isLeft ? 'pl-8' : 'flex items-start pl-8'}>
-                                        {!isLeft ? (
-                                            <div className="inline-block max-w-md text-left">
-                                                <TimelineCard event={event} index={index} />
-                                            </div>
-                                        ) : (
-                                            <span className="inline-block mt-4 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                                                {dateLabel}
-                                            </span>
-                                        )}
-                                    </div>
-                                </div>
-
-                                {/* Mobile layout */}
-                                <div className="md:hidden ml-12 flex-1">
-                                    <span className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                                        {dateLabel}
-                                    </span>
-                                    <div className="mt-1">
-                                        <TimelineCard event={event} index={index} />
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
+            {plannedEvents.length > 0 && (
+                <section className={styles.section} aria-labelledby="timeline-planned">
+                    <h2 className={styles.sectionHeading} id="timeline-planned">予定</h2>
+                    <div>{plannedEvents.map((event) => (
+                        <TimelineRow key={event.key} event={event} />
+                    ))}</div>
+                </section>
+            )}
+            {events.length > 0 && (
+                <section className={styles.section} aria-labelledby="timeline-records">
+                    <h2 className={styles.sectionHeading} id="timeline-records">これまでの記録</h2>
+                    <div>{events.map((event) => (
+                        <TimelineRow key={event.key} event={event} />
+                    ))}</div>
+                </section>
+            )}
         </div>
     );
 }
