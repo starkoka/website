@@ -1,0 +1,17 @@
+[
+  {
+    "variant": "a",
+    "title": "A案のプレビュー",
+    "width": "390px"
+  },
+  {
+    "variant": "b",
+    "title": "B案のプレビュー",
+    "width": "390px"
+  },
+  {
+    "variant": "c",
+    "title": "C案のプレビュー",
+    "width": "390px"
+  }
+]

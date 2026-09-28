@@ -1,0 +1,105 @@
+{
+  "displayName": "kokastar",
+  "altName": "こかすた〜",
+  "bio": "ソフトウェア開発を中心に、高専ロボコンや競技プログラミング、CTFなどにも取り組んでいます。",
+  "avatar": "/images/starkoka.jpeg",
+  "clubs": [
+    "木更津高専ロボット研究同好会",
+    "木更津高専プログラミング研究会",
+    "情報処理学会",
+    "電子情報通信学会"
+  ],
+  "other": [
+    "Japanese Scratch Wiki 管理者"
+  ],
+  "socials": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/kokastar_dev",
+      "icon": "twitter",
+      "contact": true
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/starkoka",
+      "icon": "github",
+      "contact": false
+    },
+    {
+      "name": "AtCoder",
+      "url": "https://atcoder.jp/users/kokastar",
+      "icon": "atcoder",
+      "contact": false
+    },
+    {
+      "name": "note",
+      "url": "https://note.com/kokastar",
+      "icon": "note",
+      "contact": false
+    },
+    {
+      "name": "Zenn",
+      "url": "https://zenn.dev/kokastar",
+      "icon": "zenn",
+      "contact": false
+    },
+    {
+      "name": "Qiita",
+      "url": "https://qiita.com/kokastar",
+      "icon": "qiita",
+      "contact": false
+    }
+  ],
+  "affiliations": {
+    "current": {
+      "full": "木更津工業高等専門学校 情報工学科",
+      "short": "木更津高専 情報工学科"
+    }
+  },
+  "events": [
+    {
+      "id": "200612-life",
+      "date": "2006-12",
+      "title": "誕生",
+      "description": "12月14日生まれです。",
+      "type": "life"
+    },
+    {
+      "id": "202204-education",
+      "date": "2022-04",
+      "title": "木更津高専 入学",
+      "description": "情報工学科に入学しました。",
+      "type": "education"
+    },
+    {
+      "id": "202412-life",
+      "date": "2024-12",
+      "title": "成人",
+      "description": "12月14日に18歳になりました。",
+      "type": "life"
+    },
+    {
+      "id": "202510-education",
+      "date": "2025-10",
+      "title": "木更津高専 研究室配属",
+      "description": "情報工学科の知能情報システム研究室に配属されました。",
+      "type": "education"
+    },
+    {
+      "id": "202703-education",
+      "date": "2027-03",
+      "title": "木更津高専 卒業予定",
+      "description": "木更津工業高等専門学校 情報工学科を卒業予定です。",
+      "type": "education",
+      "planned": true
+    },
+    {
+      "id": "202704-education",
+      "date": "2027-04",
+      "title": "一橋大学 ソーシャル・データサイエンス学部 編入予定",
+      "description": "一橋大学ソーシャル・データサイエンス学部に2年次編入予定です。",
+      "type": "education",
+      "planned": true
+    }
+  ]
+}

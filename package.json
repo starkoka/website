@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:content": "node scripts/check-content-consistency.mjs"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",

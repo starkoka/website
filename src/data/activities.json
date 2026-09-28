@@ -1,0 +1,758 @@
+{
+  "activities": [
+    {
+      "id": "Hizk",
+      "category": "creation",
+      "slug": "Hizk",
+      "title": "Hizk",
+      "description": "Mozcをベースに、入力した説明文からGPT-4で変換候補を推測するIME「Hizk」を開発しました。チームがKloudハッカソン#4で優秀賞を受賞しました。",
+      "linkText": "Hizkを見る",
+      "internal": true,
+      "detail": {
+        "body": "Mozcをベースに、入力した説明文からGPT-4で変換候補を推測するIMEです。Visual C++を使って開発しています。発表スライドとソースコードを公開しています。",
+        "embeds": [
+          {
+            "title": "Hizk 紹介スライド",
+            "url": "https://drive.google.com/file/d/1Ydly9ZT3KlIgLGKCVJ-H8Qp2gEDKhET0/preview",
+            "description": "Kloudハッカソン#4での発表スライドです。"
+          }
+        ]
+      },
+      "links": [
+        {
+          "id": "repository",
+          "label": "GitHubリポジトリ",
+          "url": "https://github.com/Team-Hmm/Hizk"
+        }
+      ],
+      "events": [
+        {
+          "id": "202403",
+          "date": "2024-03",
+          "type": "contest",
+          "title": "Kloudハッカソン#4 優秀賞"
+        }
+      ],
+      "media": [
+        {
+          "id": "image-1",
+          "src": "/images/works/Hizk/1.png",
+          "alt": "説明文の入力から「四面楚歌」を変換候補に表示するHizkの画面",
+          "width": 836,
+          "height": 403
+        },
+        {
+          "id": "image-2",
+          "src": "/images/works/Hizk/2.png"
+        },
+        {
+          "id": "image-3",
+          "src": "/images/works/Hizk/3.png"
+        }
+      ],
+      "homepage": {
+        "role": "説明文から言葉を入力するIME",
+        "linkText": "Hizkの制作内容を見る",
+        "imageId": "image-1"
+      }
+    },
+    {
+      "id": "gionsai2023",
+      "category": "creation",
+      "slug": "gionsai2023",
+      "title": "祗園祭Webサイト2023",
+      "description": "木更津高専の文化祭「祗園祭」の2023年版Webサイトを、プログラミング研究同好会のメンバーとして共同開発しました。",
+      "linkText": "祗園祭Webサイト2023を見る",
+      "internal": true,
+      "detail": {
+        "embeds": []
+      },
+      "events": [],
+      "media": []
+    },
+    {
+      "id": "Tasclear",
+      "category": "creation",
+      "slug": "Tasclear",
+      "title": "たすくりあ",
+      "description": "タスクと進捗を記録できるDiscord Botです。Kloudハッカソン#3で発表しました。",
+      "linkText": "たすくりあを見る",
+      "internal": true,
+      "detail": {
+        "body": "タスクの管理と進捗の表示ができるDiscord Botです。Kloudハッカソン#3で発表しました。",
+        "embeds": []
+      },
+      "links": [
+        {
+          "id": "repository",
+          "label": "GitHubリポジトリ",
+          "url": "https://github.com/starkoka/Tasclear"
+        }
+      ],
+      "events": [
+        {
+          "id": "202401",
+          "date": "2024-01",
+          "type": "contest",
+          "title": "Kloudハッカソン#3"
+        }
+      ],
+      "media": [
+        {
+          "id": "image-1",
+          "src": "/images/works/Tasclear/1.png",
+          "alt": "たすくりあが週間データを表示したDiscord画面",
+          "width": 526,
+          "height": 481
+        },
+        {
+          "id": "image-2",
+          "src": "/images/works/Tasclear/2.png"
+        },
+        {
+          "id": "image-3",
+          "src": "/images/works/Tasclear/3.png"
+        },
+        {
+          "id": "image-4",
+          "src": "/images/works/Tasclear/4.png"
+        }
+      ],
+      "previewImageId": "image-1"
+    },
+    {
+      "id": "KMM",
+      "category": "creation",
+      "slug": "KMM",
+      "title": "木更津高専統合管理BOT",
+      "description": "木更津高専の非公式学年サーバー向けDiscord Botを、友人と共同開発しました。",
+      "linkText": "木更津高専統合管理BOTを見る",
+      "internal": true,
+      "detail": {
+        "embeds": []
+      },
+      "links": [
+        {
+          "id": "repository",
+          "label": "GitHubリポジトリ",
+          "url": "https://github.com/NITKC-DEV/Kisarazu-Multi-Manager"
+        }
+      ],
+      "events": [],
+      "media": [
+        {
+          "id": "image-1",
+          "src": "/images/works/KMM/1.png",
+          "alt": "木更津高専統合管理BOTが時間割を表示したDiscord画面",
+          "width": 443,
+          "height": 666
+        },
+        {
+          "id": "image-2",
+          "src": "/images/works/KMM/2.png"
+        },
+        {
+          "id": "image-3",
+          "src": "/images/works/KMM/3.png"
+        }
+      ],
+      "previewImageId": "image-1"
+    },
+    {
+      "id": "Stellarculator",
+      "category": "creation",
+      "slug": "Stellarculator",
+      "title": "Stellarculator",
+      "description": "ロジックICで2bit加減算回路を作り、Raspberry Piにつないで計算結果を表示する電卓です。",
+      "linkText": "Stellarculatorを見る",
+      "internal": true,
+      "detail": {
+        "body": "ロジックICで組んだ2bit加減算回路をRaspberry Piにつなぎ、計算結果を表示します。回路の写真とソースコードを公開しています。",
+        "embeds": []
+      },
+      "links": [
+        {
+          "id": "repository",
+          "label": "GitHubリポジトリ",
+          "url": "https://github.com/starkoka/Stellarculator"
+        }
+      ],
+      "events": [],
+      "media": [
+        {
+          "id": "image-1",
+          "src": "/images/works/Stellarculator/1.png"
+        },
+        {
+          "id": "image-2",
+          "src": "/images/works/Stellarculator/2.jpg",
+          "alt": "ブレッドボードに組んだStellarculatorの加減算回路",
+          "width": 4032,
+          "height": 3024
+        },
+        {
+          "id": "image-3",
+          "src": "/images/works/Stellarculator/3.jpg"
+        },
+        {
+          "id": "image-4",
+          "src": "/images/works/Stellarculator/4.jpg"
+        }
+      ],
+      "homepage": {
+        "role": "自作回路を使った電卓",
+        "linkText": "電卓の制作内容を見る",
+        "imageId": "image-2"
+      }
+    },
+    {
+      "id": "KosenRBKN",
+      "category": "creation",
+      "slug": "KosenRBKN",
+      "title": "高専ロボコンHP更新お知らせbot",
+      "description": "高専ロボコン公式サイトの更新を検知し、DiscordのWebhookで通知するBotです。",
+      "linkText": "GitHubリポジトリ",
+      "internal": false,
+      "detail": {
+        "embeds": []
+      },
+      "events": [],
+      "links": [
+        {
+          "id": "primary",
+          "label": "GitHubリポジトリ",
+          "url": "https://github.com/starkoka/KosenRBKN-notice-bot"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "society-2026",
+      "category": "research",
+      "slug": null,
+      "title": "電子情報通信学会ソサイエティ大会2026",
+      "linkText": "講演ページ（A-11-13）を見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "20260923",
+          "date": "2026-09-23",
+          "type": "research",
+          "paperTitle": "CodeBERTとLightGBMによるプログラミング自動採点の検証",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "講演ページ（A-11-13）を見る",
+          "url": "https://pub.confit.atlas.jp/ja/event/society2026/presentation/A-11-13"
+        }
+      ]
+    },
+    {
+      "id": "kes-2026",
+      "category": "research",
+      "slug": null,
+      "title": "KES2026の共著論文",
+      "linkText": "公式プログラムを見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "20260910",
+          "date": "2026-09-10",
+          "type": "research",
+          "paperTitle": "A Data-Centric Framework for Automated Partial-Credit Grading: Rubric-Guided Anchor-Based Data Augmentation",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "公式プログラム（504）を見る",
+          "url": "http://kes2026.kesinternational.org/KES26_programme_v5.pdf#page=71"
+        }
+      ],
+      "description": "9月10日の発表プログラムに掲載されました。"
+    },
+    {
+      "id": "fit-2026",
+      "category": "research",
+      "slug": null,
+      "title": "FIT2026で研究発表",
+      "description": "FIT奨励賞を受賞しました。",
+      "linkText": "公式プログラム（N-028）を見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "20260904",
+          "date": "2026-09-04",
+          "type": "research",
+          "paperTitle": "CodeBERTとLightGBMを用いた少量データ環境下でのプログラミング自動採点手法",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "公式プログラム（N-028）を見る",
+          "url": "https://www.ipsj.or.jp/event/fit/fit2026/abstract/data/html/program/n.html"
+        }
+      ]
+    },
+    {
+      "id": "atcoder",
+      "category": "competition",
+      "slug": null,
+      "title": "AtCoder",
+      "description": "ABCとAHCを中心に出場してきました。",
+      "type": "atcoder",
+      "linkText": "AtCoderアカウント",
+      "internal": false,
+      "socialName": "AtCoder",
+      "events": []
+    },
+    {
+      "id": "KosenRobocon",
+      "category": "competition",
+      "slug": "KosenRobocon",
+      "title": "高専ロボコン",
+      "description": "2022年から木更津高専ロボット研究同好会所属として高専ロボコンに参加しています。リーダー、マネージャー、制御、操縦を担当してきました。",
+      "linkText": "高専ロボコンを見る",
+      "internal": true,
+      "detail": {
+        "eventHistory": true,
+        "embeds": []
+      },
+      "events": [
+        {
+          "id": "202210",
+          "date": "2022-10",
+          "type": "contest",
+          "title": "高専ロボコン2022 出場",
+          "description": "Bチームのリーダーを担当しました。"
+        },
+        {
+          "id": "202310",
+          "date": "2023-10",
+          "type": "contest",
+          "title": "高専ロボコン2023 出場",
+          "description": "Bチームのリーダーと制御を担当しました。"
+        },
+        {
+          "id": "202409",
+          "date": "2024-09",
+          "type": "contest",
+          "title": "高専ロボコン2024 地区大会",
+          "description": "Aチームのマネージャーと制御を担当。特別賞(マブチモーター)を受賞し、全国大会に進みました。"
+        },
+        {
+          "id": "202411",
+          "date": "2024-11",
+          "type": "contest",
+          "title": "高専ロボコン2024 全国大会",
+          "description": "Aチームのマネージャー・制御・操縦を担当。チームがデザイン賞を受賞しました。"
+        },
+        {
+          "id": "202510",
+          "date": "2025-10",
+          "type": "contest",
+          "title": "高専ロボコン2025 地区大会",
+          "description": "Aチームのマネージャーと制御を担当。チームは準決勝に進み、地区大会の最高得点を記録して全国大会に出場しました。"
+        },
+        {
+          "id": "202511",
+          "date": "2025-11",
+          "type": "contest",
+          "title": "高専ロボコン2025 全国大会",
+          "linkText": "ロボコンでの活動を見る",
+          "description": "Aチームのマネージャー・制御・操縦を担当し、2年連続で全国大会に出場しました。"
+        },
+        {
+          "id": "20260920",
+          "date": "2026-09-20",
+          "type": "contest",
+          "title": "高専ロボコン2026 地区大会",
+          "linkText": "ロボコンでの活動を見る",
+          "description": "木更津高専Bチームでマネージャー・制御・操縦を担当しました。チームは予選で敗退しましたが、特別賞（デンソー）を受賞しました。"
+        }
+      ],
+      "media": [
+        {
+          "id": "image-1",
+          "src": "/images/works/KosenRBKN/1.png",
+          "alt": "高専ロボコン2024 デザイン賞のトロフィー・賞状との記念写真",
+          "width": 1260,
+          "height": 945
+        },
+        {
+          "id": "image-2",
+          "src": "/images/works/KosenRBKN/2.png",
+          "alt": "高専ロボコン2022 紙飛行機を自動で折って飛ばすロボット"
+        },
+        {
+          "id": "image-3",
+          "src": "/images/works/KosenRBKN/3.png",
+          "alt": "高専ロボコン2023に出場したロボット(製作中)"
+        },
+        {
+          "id": "image-4",
+          "src": "/images/works/KosenRBKN/4.png",
+          "alt": "高専ロボコン2024に出場したロボットの発射機構部分"
+        },
+        {
+          "id": "image-5",
+          "src": "/images/works/KosenRBKN/5.png",
+          "alt": "高専ロボコン2024に出場したロボット(きさぺん)の千葉市動物公園への表敬訪問"
+        },
+        {
+          "id": "image-6",
+          "src": "/images/works/KosenRBKN/6.png",
+          "alt": "イオンモール木更津におけるデモにおける，ロボットの展示"
+        },
+        {
+          "id": "image-7",
+          "src": "/images/works/KosenRBKN/7.png",
+          "alt": "高専ロボコン2025 全国大会出場時の木更津高専パネルと国技館"
+        },
+        {
+          "id": "image-8",
+          "src": "/images/works/KosenRBKN/8.png",
+          "alt": "高専ロボコン2025 関東甲信越地区大会の最高得点を記録した瞬間",
+          "width": 1494,
+          "height": 837
+        },
+        {
+          "id": "image-9",
+          "src": "/images/works/KosenRBKN/9.png",
+          "alt": "高専ロボコン2025 関東甲信越地区大会の最高得点を記録したときのゲート",
+          "width": 724,
+          "height": 961
+        },
+        {
+          "id": "image-10",
+          "src": "/images/works/KosenRBKN/10.png",
+          "alt": "高専ロボコン2025の競技を行う様子(ゲートの上の天井を載せている)",
+          "width": 1488,
+          "height": 840
+        },
+        {
+          "id": "image-11",
+          "src": "/images/works/KosenRBKN/11.png",
+          "alt": "高専ロボコン2025 全国大会において操縦者が見ていたカメラ映像",
+          "width": 1494,
+          "height": 690
+        },
+        {
+          "id": "image-12",
+          "src": "/images/works/KosenRBKN/12.png",
+          "alt": "高専ロボコン2026に出場したロボット",
+          "width": 721,
+          "height": 961
+        },
+        {
+          "id": "image-13",
+          "src": "/images/works/KosenRBKN/13.png",
+          "alt": "高専ロボコン2026 関東甲信越地区大会にて ロボットとツーショット",
+          "width": 2240,
+          "height": 3072
+        }
+      ],
+      "homepage": {
+        "role": "マネージャー・制御・操縦",
+        "linkText": "ロボコンでの活動を見る",
+        "imageId": "image-1"
+      }
+    },
+    {
+      "id": "diver-osint-2024",
+      "category": "competition",
+      "slug": null,
+      "title": "DIVER OSINT CTF 2024",
+      "description": "木更津高専のチームで参加し、484チーム中10位でした。チームの解説記事を公開しています。",
+      "linkText": "チームのWriteUp",
+      "internal": false,
+      "events": [
+        {
+          "id": "202406",
+          "date": "2024-06",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "チームのWriteUp",
+          "url": "https://hackmd.io/@YumaOchi/rJ52sqGH0"
+        }
+      ]
+    },
+    {
+      "id": "gci-2023-winter",
+      "category": "competition",
+      "slug": null,
+      "title": "GCI 2023 Winter",
+      "description": "松尾研究室が開催するデータサイエンス講座を修了しました。",
+      "linkText": "GCI公式HP",
+      "internal": false,
+      "events": [
+        {
+          "id": "202301",
+          "date": "2023-01",
+          "type": "achievement",
+          "title": "GCI 2023 Winter 修了",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "GCI公式HP",
+          "url": "https://gci2.t.u-tokyo.ac.jp/"
+        }
+      ]
+    },
+    {
+      "id": "ajl-2023",
+      "category": "competition",
+      "slug": null,
+      "title": "AtCoder Junior League 2023",
+      "description": "高校部門で木更津高専が14位、高2部門で個人43位でした。",
+      "linkText": "AJL2023公式サイト",
+      "internal": false,
+      "events": [
+        {
+          "id": "202310",
+          "date": "2023-10",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "AJL2023公式サイト",
+          "url": "https://atcoder.jp/contests/ajl2023"
+        }
+      ]
+    },
+    {
+      "id": "joi-2023-2024",
+      "category": "competition",
+      "slug": null,
+      "title": "日本情報オリンピック 2023/2024",
+      "description": "一次予選は全問正解。二次予選は174点（各問題100・47・23・4・0点）でした。",
+      "linkText": "JOI2023/2024 二次予選問題",
+      "internal": false,
+      "events": [
+        {
+          "id": "202311",
+          "date": "2023-11",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "JOI2023/2024 二次予選問題",
+          "url": "https://atcoder.jp/contests/joi2024yo2"
+        }
+      ]
+    },
+    {
+      "id": "diver-osint-2025",
+      "category": "competition",
+      "slug": null,
+      "title": "DIVER OSINT CTF 2025",
+      "linkText": "チームのWrite Upを読む",
+      "internal": false,
+      "events": [
+        {
+          "id": "202506",
+          "date": "2025-06",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "チームのWrite Upを読む（HackMD）",
+          "url": "https://hackmd.io/@tsuneki/HyfEQFGXlg"
+        }
+      ],
+      "description": "チーム「m01nm01n」で参加し、5位でした。"
+    },
+    {
+      "id": "diver-osint-2026",
+      "category": "competition",
+      "slug": null,
+      "title": "DIVER OSINT CTF 2026",
+      "linkText": "大会結果を見る（CTFtime）",
+      "internal": false,
+      "events": [
+        {
+          "id": "202607",
+          "date": "2026-07",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "大会結果を見る（CTFtime）",
+          "url": "https://ctftime.org/event/3268/"
+        }
+      ],
+      "description": "公開情報を収集・分析して課題を解くOSINTのオンライン大会に、チーム「m01nm01n」で参加しました。チームは12,160点を獲得し、865チーム中6位でした。"
+    },
+    {
+      "id": "joi-2024-2025",
+      "category": "competition",
+      "slug": null,
+      "title": "日本情報オリンピック 2024/2025",
+      "linkText": "本戦の結果を見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "202502",
+          "date": "2025-02",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "本戦の結果を見る",
+          "url": "https://www.ioi-jp.org/joi/2024/2025-joi-ho-list"
+        }
+      ],
+      "description": "一次予選は全問正解。二次予選290点で本戦に進み、本戦では153点でした。"
+    },
+    {
+      "id": "kosen-procon-2024",
+      "category": "competition",
+      "slug": null,
+      "title": "高専プロコン2024 競技部門出場",
+      "linkText": "学校の記事を見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "202410",
+          "date": "2024-10",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "学校の記事を見る",
+          "url": "https://www.kisarazu.ac.jp/news/%E7%AC%AC35%E5%9B%9E%E5%85%A8%E5%9B%BD%E9%AB%98%E7%AD%89%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88/"
+        }
+      ],
+      "description": "木更津高専の代表として参加しました。"
+    },
+    {
+      "id": "ajl-2024-summer",
+      "category": "competition",
+      "slug": null,
+      "title": "AtCoder Junior League 2024 Summer",
+      "linkText": "大会ページを見る",
+      "internal": false,
+      "events": [
+        {
+          "id": "202410",
+          "date": "2024-10",
+          "type": "contest",
+          "linkId": "primary"
+        }
+      ],
+      "links": [
+        {
+          "id": "primary",
+          "label": "大会ページを見る",
+          "url": "https://atcoder.jp/contests/ajl2024summer"
+        }
+      ],
+      "description": "高校部門A 43位・H 26位、高3個人部門A 33位・H 16位でした。"
+    },
+    {
+      "id": "toeic-2026",
+      "category": null,
+      "title": "TOEIC L&R 790点取得",
+      "works": false,
+      "events": [
+        {
+          "id": "202603",
+          "date": "2026-03",
+          "type": "score"
+        }
+      ],
+      "description": "TOEIC L&Rで790点（L400・R390）を取得しました。"
+    },
+    {
+      "id": "statistics-test-2-2026",
+      "category": null,
+      "title": "統計検定2級 合格",
+      "works": false,
+      "events": [
+        {
+          "id": "202604",
+          "date": "2026-04",
+          "type": "qualification",
+          "period": "early"
+        }
+      ],
+      "description": "統計検定2級に合格しました。"
+    },
+    {
+      "id": "fundamental-it-2026",
+      "category": null,
+      "title": "基本情報技術者試験 合格",
+      "works": false,
+      "events": [
+        {
+          "id": "202604",
+          "date": "2026-04",
+          "type": "qualification",
+          "period": "late"
+        }
+      ],
+      "description": "基本情報技術者試験に合格しました。"
+    },
+    {
+      "id": "g-test-2026",
+      "category": null,
+      "title": "G検定 合格",
+      "works": false,
+      "events": [
+        {
+          "id": "202605",
+          "date": "2026-05",
+          "type": "qualification"
+        }
+      ],
+      "description": "G検定に合格しました。"
+    },
+    {
+      "id": "kisarazu-advent-calendar",
+      "category": null,
+      "title": "木更津高専 Advent Calendar",
+      "description": "2023~2025年の木更津高専Advent Calendarを主催しました。",
+      "works": false,
+      "links": [
+        {
+          "id": "primary",
+          "label": "Advent Calendarを見る",
+          "url": "https://qiita.com/advent-calendar/2024/nit_kisarazu"
+        }
+      ],
+      "events": []
+    }
+  ]
+}

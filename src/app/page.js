@@ -1,57 +1,139 @@
-import Header from '../../components/header.js';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import SocialIcon from "../../components/SocialIcon";
+import profile from "../data/profile.json";
+import skills from "../data/skills.json";
+import { getActivityOverview, getCurrentAffiliation, getFeaturedActivities, getHomeSocials, getMedia, getRecentEvents } from "../lib/content";
+import { formatTimelineDate } from "../lib/timeline";
+import styles from "./home.module.css";
 
+export const metadata = {
+  title: "kokastar.dev | 制作物と活動記録",
+  description: `${profile.displayName}の制作物と活動記録。`,
+};
+
+const socialLinks = getHomeSocials();
+const featuredWorks = getFeaturedActivities();
+const recentActivities = getRecentEvents();
+
+function ActivityLink({ event }) {
+  if (!event.link) return null;
+  if (event.link.href.startsWith("/")) {
+    return <Link href={event.link.href}>{event.link.label}</Link>;
+  }
+  return <a href={event.link.href} target="_blank" rel="noopener noreferrer">{event.link.label}</a>;
+}
+
+function FeaturedWork({ item }) {
+  const home = item.homepage;
+  const image = getMedia(item, home.imageId);
+  const summary = home.summary || getActivityOverview(item);
+
+  return (
+    <article className={styles.work}>
+      <div className={styles.workHeading}>
+        <h3>{item.title}</h3>
+        <p className={styles.role}>{home.role}</p>
+      </div>
+      {image && (
+        <figure className={styles.workMedia}>
+          <Image
+            src={image.src}
+            alt={image.alt || ""}
+            width={image.width}
+            height={image.height}
+            sizes="(max-width: 560px) 100vw, 220px"
+          />
+        </figure>
+      )}
+      <div className={styles.workDescription}>
+        <p>{summary}</p>
+        {home.result && <p className={styles.result}>{home.result}</p>}
+      </div>
+      <Link className={styles.workLink} href={`/works/${item.slug}`}>{home.linkText || `${item.title}を見る`}</Link>
+    </article>
+  );
+}
 
 export default function Home() {
-    return (
-        <div>
-            <div className="flex flex-col items-center">
-                <div
-                    className="w-[100vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
-                    <div className="flex items-center justify-center w-full h-28 mb-[5vw]">
-                        <img src="/images/starkoka.jpeg" alt="kokastarのアイコン"
-                             className="rounded-full w-[10vw] mt-[5vw]"/>
-                    </div>
-                    <h1 className="text-center text-[3vw]">I am kokastar</h1>
-                    <div className="flex justify-center mb-[10px]">
-                        <Link href="https://twitter.com/kokastar_dev" target="_blank">
-                            <svg className="w-[30px] mr-0.5" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                <path fill="#5B43F0"
-                                      d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path>
-                            </svg>
-                        </Link>
-                        <Link href="https://github.com/starkoka" target="_blank">
-                            <svg className="w-[30px] ml-0.5" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                <path fill="#5B43F0"
-                                      d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
-                            </svg>
-                        </Link>
-                    </div>
-                </div>
-
-                <div
-                    className="w-[66vw] bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg mt-[3vw]">
-                    <h1 className="text-center text-[2vw]">README</h1>
-                    <div className="ml-[2vw] text-[1vw]">
-                        <p>kokastarです。表記はkokastar or こかすた〜です。</p>
-                        <p>競技プログラミング・高専ロボコンを中心に色々やってる高専生です。</p>
-                        <p>主にC++/Python/JavaScriptを扱っています。Web系はこのサイトが作れる程度です。</p>
-                    </div>
-                </div>
-
-                <div className="flex flex-wrap justify-center mt-[3vw] space-x-[4vw]">
-                    <div
-                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
-                        <Link href="/about"><h1 className="text-center text-[2vw] underline">about→</h1></Link>
-                        <p className="text-center text-[1vw]">もっと詳しい自己紹介</p>
-                    </div>
-                    <div
-                        className="flex-grow bg-gray-200/30 backdrop-blur-lg rounded-md border border-gray-200/30 shadow-lg items-center justify-center w-[31vw]">
-                        <Link href="/works"><h1 className="text-center text-[2vw] underline">works→</h1></Link>
-                        <p className="text-center text-[1vw]">過去に作ったもの・取り組んだことの紹介</p>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className={styles.home}>
+      <aside className={styles.profile} aria-label="プロフィール">
+        <div className={styles.identity}>
+          <Image src={profile.avatar} alt="" width={72} height={72} priority />
+          <div>
+            <h1 translate="no">{profile.displayName}</h1>
+            <p className={styles.alias}>{profile.altName}</p>
+          </div>
         </div>
-    );
+        <p className={styles.affiliation}>{getCurrentAffiliation(true)}</p>
+        <p className={styles.intro}>{profile.bio}</p>
+        <nav className={styles.profileNav} aria-label="ページ内とプロフィール">
+          <a href="#recent-activity">最近の活動</a>
+          <a href="#selected-works">制作物と担当内容</a>
+          <a href="#profile-details">プロフィール</a>
+        </nav>
+        <nav className={styles.socialNav} aria-label="外部プロフィール">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name === "Twitter" ? "X" : social.name}
+            >
+              <SocialIcon icon={social.icon} />
+            </a>
+          ))}
+        </nav>
+        <Link className={styles.contactLink} href="/contact">お問い合わせ</Link>
+      </aside>
+
+      <div className={styles.content}>
+        <section id="recent-activity" className={styles.activity} aria-labelledby="activity-heading">
+          <h2 id="activity-heading" className={styles.sectionTitle}>最近の活動</h2>
+          {recentActivities.map((event) => (
+            <div className={styles.activityItem} key={event.key}>
+              <p className={styles.activityDate}>{formatTimelineDate(event)}</p>
+              <h3>{event.title}</h3>
+              {event.paperTitle && <p className={styles.paperTitle}>論文「{event.paperTitle}」</p>}
+              {event.description && <p className={styles.activityDescription}>{event.description}</p>}
+              <ActivityLink event={event} />
+            </div>
+          ))}
+          <Link className={styles.historyLink} href="/timeline">活動履歴を見る</Link>
+        </section>
+
+        <section id="selected-works" className={styles.works} aria-labelledby="works-heading">
+          <h2 id="works-heading" className={styles.sectionTitle}>制作物と担当内容</h2>
+
+          {featuredWorks.map((item) => <FeaturedWork key={item.slug} item={item} />)}
+          <Link className={styles.allWorks} href="/works">すべての制作物を見る</Link>
+        </section>
+
+        <section id="profile-details" className={styles.details} aria-labelledby="profile-details-heading">
+          <h2 id="profile-details-heading" className={styles.sectionTitle}>プロフィール</h2>
+          <div className={styles.detailRows}>
+            <div className={styles.detailGroup}>
+              <h3>所属・活動</h3>
+              <ul className={styles.affiliationList}>
+                {[...profile.clubs, ...profile.other].map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+            <div className={styles.detailGroup}>
+              <h3>使用技術</h3>
+              <ul className={styles.skillList}>
+                {skills.items.map((skill) => (
+                  <li key={skill.name}>
+                    <span className={styles.skillName}>{skill.name}</span>
+                    <span className={styles.skillDescription}>{skill.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 }
