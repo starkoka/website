@@ -1,6 +1,8 @@
 # kokastar.dev
 
-Next.js 14で作成した個人サイトです。トップ、Works、Timelineは共通の活動データから表示します。旧Aboutページへのアクセスはトップのプロフィール欄へ転送します。
+Next.js 16で作成した個人サイトです。トップ、Works、Timelineは共通の活動データから表示します。旧Aboutページへのアクセスはトップのプロフィール欄へ転送します。
+
+公開とサーバー運用は [deploy/README.md](deploy/README.md) を参照してください。
 
 ## 開発
 

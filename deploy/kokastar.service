@@ -1,0 +1,37 @@
+[Unit]
+Description=kokastar.dev Next.js production server
+After=network.target
+
+[Service]
+Type=simple
+User=kokastar-web
+Group=kokastar-web
+WorkingDirectory=/srv/kokastar/current
+Environment=NODE_ENV=production
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=3000
+Environment=NEXT_TELEMETRY_DISABLED=1
+ExecStart=/opt/kokastar-node/bin/node /srv/kokastar/current/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/kokastar/current/.next/cache
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+LockPersonality=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+TasksMax=128
+MemoryMax=768M
+
+[Install]
+WantedBy=multi-user.target

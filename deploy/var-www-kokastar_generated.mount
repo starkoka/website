@@ -1,0 +1,12 @@
+[Unit]
+Description=Read-only view of generated website assets
+Before=apache2.service
+
+[Mount]
+What=/home/kokastar/website/public
+Where=/var/www/kokastar_generated
+Type=none
+Options=bind,ro,nosuid,nodev,noexec
+
+[Install]
+WantedBy=multi-user.target
