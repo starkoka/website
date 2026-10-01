@@ -17,6 +17,9 @@ export async function GET(req) {
     const params = req.nextUrl.searchParams;
     const query = params.get('type');
     const atcoderId = params.get('username') ?? profile.socials.find((social) => social.name === 'AtCoder').url.split('/').pop();
+    if (!/^[A-Za-z0-9_]{1,32}$/.test(atcoderId)) {
+        return Response.json({ error: 'Invalid username' }, { status: 400 });
+    }
 
     const res = {
         "schemaVersion": 1,
@@ -33,6 +36,7 @@ export async function GET(req) {
             const rating = (
                 await axios.get(
                     `https://atcoder.jp/users/${atcoderId}/history/json?contestType=heuristic`,
+                    { timeout: 5000, maxRedirects: 0, maxContentLength: 2 * 1024 * 1024 },
                 )
             ).data.slice(-1)[0].NewRating;
 
@@ -50,6 +54,7 @@ export async function GET(req) {
             const rating = (
                 await axios.get(
                     `https://atcoder.jp/users/${atcoderId}/history/json?contestType=algo`,
+                    { timeout: 5000, maxRedirects: 0, maxContentLength: 2 * 1024 * 1024 },
                 )
             ).data.slice(-1)[0].NewRating;
 
@@ -62,5 +67,5 @@ export async function GET(req) {
         }
     }
 
-    return Response.json(res)
+    return Response.json(res, { headers: { 'Cache-Control': 'public, s-maxage=1800, stale-while-revalidate=3600' } })
 }
