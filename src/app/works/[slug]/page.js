@@ -10,8 +10,9 @@ export function generateStaticParams() {
   return getAllDetailItems().map((item) => ({ slug: item.slug }));
 }
 
-export default function WorkDetailPage({ params }) {
-  const activity = getAllDetailItems().find((item) => item.slug === params.slug);
+export default async function WorkDetailPage({ params }) {
+  const { slug } = await params;
+  const activity = getAllDetailItems().find((item) => item.slug === slug);
   if (!activity) notFound();
 
   return <WorksPage activity={activity} />;
