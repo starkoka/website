@@ -13,10 +13,10 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata = {
   title: "kokastar.dev",
-  description: `${profile.displayName}の制作物と活動記録。`,
+  description: `${profile.displayName}のWebサイト。`,
   openGraph: {
     title: "kokastar.dev",
-    description: `${profile.displayName}の制作物と活動記録。`,
+    description: `${profile.displayName}のWebサイト。`,
     url: "https://kokastar.dev",
     siteName: "kokastar.dev",
     locale: "ja_JP",

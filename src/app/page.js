@@ -8,8 +8,8 @@ import { formatTimelineDate } from "../lib/timeline";
 import styles from "./home.module.css";
 
 export const metadata = {
-  title: "kokastar.dev | 制作物と活動記録",
-  description: `${profile.displayName}の制作物と活動記録。`,
+  title: "kokastar.dev",
+  description: `${profile.displayName}のWebサイト`,
 };
 
 const socialLinks = getHomeSocials();
