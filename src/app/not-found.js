@@ -12,12 +12,12 @@ export default function NotFound() {
                     お探しのページは見つかりませんでした
                 </p>
                 <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
-                    これは見つからずにふて寝してるきなこ
+                    ページが見つからず、ふて寝しているきなこ
                 </p>
                 <div className="mb-6">
                     <img
                         src="/images/kinako_futene.jpg"
-                        alt="ふて寝してるハムスター"
+                        alt="ふて寝しているハムスター"
                         className="max-w-48 mx-auto rounded-xl object-contain"
                     />
                 </div>

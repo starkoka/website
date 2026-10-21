@@ -9,7 +9,7 @@
       "linkText": "Hizkを見る",
       "internal": true,
       "detail": {
-        "body": "Mozcをベースに、入力した説明文からGPT-4で変換候補を推測するIMEです。Visual C++を使って開発しています。発表スライドとソースコードを公開しています。",
+        "body": "Mozcをベースに、入力した説明文からGPT-4で変換候補を推測するIMEです。Visual C++を使って開発しています。",
         "embeds": [
           {
             "title": "Hizk 紹介スライド",
@@ -167,7 +167,7 @@
       "linkText": "Stellarculatorを見る",
       "internal": true,
       "detail": {
-        "body": "ロジックICで組んだ2bit加減算回路をRaspberry Piにつなぎ、計算結果を表示します。回路の写真とソースコードを公開しています。",
+        "body": "ロジックICで組んだ2bit加減算回路をRaspberry Piにつなぎ、計算結果を表示します。",
         "embeds": []
       },
       "links": [
@@ -317,7 +317,7 @@
       "category": "competition",
       "slug": "KosenRobocon",
       "title": "高専ロボコン",
-      "description": "2022年から木更津高専ロボット研究同好会所属として高専ロボコンに参加しています。リーダー、マネージャー、制御、操縦を担当してきました。",
+      "description": "2022年から木更津高専ロボット研究同好会の一員として高専ロボコンに参加しています。リーダー、マネージャー、制御、操縦を担当してきました。",
       "linkText": "高専ロボコンを見る",
       "internal": true,
       "detail": {
@@ -344,21 +344,21 @@
           "date": "2024-09",
           "type": "contest",
           "title": "高専ロボコン2024 地区大会",
-          "description": "Aチームのマネージャーと制御を担当。特別賞(マブチモーター)を受賞し、全国大会に進みました。"
+          "description": "Aチームのマネージャーと制御を担当しました。チームが特別賞(マブチモーター)を受賞し、全国大会に進みました。"
         },
         {
           "id": "202411",
           "date": "2024-11",
           "type": "contest",
           "title": "高専ロボコン2024 全国大会",
-          "description": "Aチームのマネージャー・制御・操縦を担当。チームがデザイン賞を受賞しました。"
+          "description": "Aチームのマネージャー・制御・操縦を担当しました。チームがデザイン賞を受賞しました。"
         },
         {
           "id": "202510",
           "date": "2025-10",
           "type": "contest",
           "title": "高専ロボコン2025 地区大会",
-          "description": "Aチームのマネージャーと制御を担当。チームは準決勝に進み、地区大会の最高得点を記録して全国大会に出場しました。"
+          "description": "Aチームのマネージャーと制御を担当しました。チームは準決勝に進み、地区大会の最高得点を記録して全国大会に出場しました。"
         },
         {
           "id": "202511",
@@ -408,7 +408,7 @@
         {
           "id": "image-6",
           "src": "/images/works/KosenRBKN/6.png",
-          "alt": "イオンモール木更津におけるデモにおける，ロボットの展示"
+          "alt": "イオンモール木更津でのロボットの展示・実演"
         },
         {
           "id": "image-7",
@@ -432,7 +432,7 @@
         {
           "id": "image-10",
           "src": "/images/works/KosenRBKN/10.png",
-          "alt": "高専ロボコン2025の競技を行う様子(ゲートの上の天井を載せている)",
+          "alt": "高専ロボコン2025の競技中、ゲートの上に天井を載せている様子",
           "width": 1488,
           "height": 840
         },
@@ -453,7 +453,7 @@
         {
           "id": "image-13",
           "src": "/images/works/KosenRBKN/13.png",
-          "alt": "高専ロボコン2026 関東甲信越地区大会にて ロボットとツーショット",
+          "alt": "高専ロボコン2026 関東甲信越地区大会でロボットと撮影した写真",
           "width": 2240,
           "height": 3072
         }
@@ -470,7 +470,7 @@
       "slug": null,
       "title": "DIVER OSINT CTF 2024",
       "description": "木更津高専のチームで参加し、484チーム中10位でした。チームの解説記事を公開しています。",
-      "linkText": "チームのWriteUp",
+      "linkText": "チームの解説記事を読む",
       "internal": false,
       "events": [
         {
@@ -483,7 +483,7 @@
       "links": [
         {
           "id": "primary",
-          "label": "チームのWriteUp",
+          "label": "チームの解説記事を読む",
           "url": "https://hackmd.io/@YumaOchi/rJ52sqGH0"
         }
       ]
@@ -542,7 +542,7 @@
       "category": "competition",
       "slug": null,
       "title": "日本情報オリンピック 2023/2024",
-      "description": "一次予選は全問正解。二次予選は174点（各問題100・47・23・4・0点）でした。",
+      "description": "一次予選は全問正解でした。二次予選は174点（各問題100・47・23・4・0点）でした。",
       "linkText": "JOI2023/2024 二次予選問題",
       "internal": false,
       "events": [
@@ -566,7 +566,7 @@
       "category": "competition",
       "slug": null,
       "title": "DIVER OSINT CTF 2025",
-      "linkText": "チームのWrite Upを読む",
+      "linkText": "チームの解説記事を読む",
       "internal": false,
       "events": [
         {
@@ -579,7 +579,7 @@
       "links": [
         {
           "id": "primary",
-          "label": "チームのWrite Upを読む（HackMD）",
+          "label": "チームの解説記事を読む（HackMD）",
           "url": "https://hackmd.io/@tsuneki/HyfEQFGXlg"
         }
       ],
@@ -631,7 +631,7 @@
           "url": "https://www.ioi-jp.org/joi/2024/2025-joi-ho-list"
         }
       ],
-      "description": "一次予選は全問正解。二次予選290点で本戦に進み、本戦では153点でした。"
+      "description": "一次予選は全問正解でした。二次予選は290点で本戦に進み、本戦では153点でした。"
     },
     {
       "id": "kosen-procon-2024",
@@ -679,7 +679,7 @@
           "url": "https://atcoder.jp/contests/ajl2024summer"
         }
       ],
-      "description": "高校部門A 43位・H 26位、高3個人部門A 33位・H 16位でした。"
+      "description": "高校部門はアルゴリズム43位・ヒューリスティック26位、高3個人部門はアルゴリズム33位・ヒューリスティック16位でした。"
     },
     {
       "id": "toeic-2026",
@@ -708,7 +708,7 @@
           "period": "early"
         }
       ],
-      "description": "統計検定2級に合格しました。"
+      "description": ""
     },
     {
       "id": "fundamental-it-2026",
@@ -723,7 +723,7 @@
           "period": "late"
         }
       ],
-      "description": "基本情報技術者試験に合格しました。"
+      "description": ""
     },
     {
       "id": "g-test-2026",
@@ -737,7 +737,7 @@
           "type": "qualification"
         }
       ],
-      "description": "G検定に合格しました。"
+      "description": ""
     },
     {
       "id": "kisarazu-advent-calendar",

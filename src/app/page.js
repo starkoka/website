@@ -68,7 +68,7 @@ export default function Home() {
         </div>
         <p className={styles.affiliation}>{getCurrentAffiliation(true)}</p>
         <p className={styles.intro}>{profile.bio}</p>
-        <nav className={styles.profileNav} aria-label="ページ内とプロフィール">
+        <nav className={styles.profileNav} aria-label="ページ内ナビゲーション">
           <a href="#recent-activity">最近の活動</a>
           <a href="#selected-works">制作物と担当内容</a>
           <a href="#profile-details">プロフィール</a>
@@ -108,7 +108,7 @@ export default function Home() {
           <h2 id="works-heading" className={styles.sectionTitle}>制作物と担当内容</h2>
 
           {featuredWorks.map((item) => <FeaturedWork key={item.slug} item={item} />)}
-          <Link className={styles.allWorks} href="/works">すべての制作物を見る</Link>
+          <Link className={styles.allWorks} href="/works">すべての活動を見る</Link>
         </section>
 
         <section id="profile-details" className={styles.details} aria-labelledby="profile-details-heading">
@@ -126,7 +126,7 @@ export default function Home() {
                 {skills.items.map((skill) => (
                   <li key={skill.name}>
                     <span className={styles.skillName}>{skill.name}</span>
-                    <span className={styles.skillDescription}>{skill.description}</span>
+                    {skill.description && <span className={styles.skillDescription}>{skill.description}</span>}
                   </li>
                 ))}
               </ul>

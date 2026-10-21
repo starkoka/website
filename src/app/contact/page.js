@@ -18,7 +18,10 @@ export default function ContactPage() {
                     aria-label={`X @${social.url.split('/').pop()}を開く`}
                 >
                     <SocialIcon icon={social.icon} />
-                    <span className={styles.contactHandle}>@{social.url.split('/').pop()}</span>
+                    <span>
+                        Xのプロフィールを開く
+                        <span className={styles.contactHandle}> @{social.url.split('/').pop()}</span>
+                    </span>
                 </a>
             ))}
         </div>
